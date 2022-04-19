@@ -1,0 +1,21 @@
+/* Vendor */
+
+@import url("../vendor/normalize.css");
+@import url("../fonts/fonts.css");
+@import "_vars";
+
+/* Page */
+
+@import "page/page";
+@import "page/__link/page__link";
+@import "container/container";
+@import "container/_block_header/container_block_header";
+
+/* Header */
+
+@import "header/header";
+@import "header/__logo/header__logo";
+@import "header/__nav-list/header__nav-list";
+@import "header/__nav-link/header__nav-link";
+@import "header/__nav-icon/header__nav-icon";
+@import "header/__nav-link/_is_active/header__nav-link_is_active";

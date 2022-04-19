@@ -1,15 +1,100 @@
-@import url('../vendor/normalize.css');
-@import url('../fonts/fonts.css');
-
+/* Vendor */
+@import url("../vendor/normalize.css");
+@import url("../fonts/fonts.css");
+/* Page */
 .page {
-  min-width: 1100px;
-  max-width: 1600px;
-  margin: 0 auto;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Golos', Helvetica, Arial, sans-serif;
 }
 
+.page__link {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: #212329;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1440px;
+}
+
+.container_block_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  padding: 24px 60px;
+}
+
+/* Header */
 .header {
-  height: 100vh;
-  min-height: 600px;
-  max-height: 756px;
+  -webkit-box-shadow: 0px 4px 16px 0px rgba(231, 232, 235, 0.6), 0px 0px 4px 0px rgba(231, 232, 235, 0.6);
+          box-shadow: 0px 4px 16px 0px rgba(231, 232, 235, 0.6), 0px 0px 4px 0px rgba(231, 232, 235, 0.6);
+}
+
+.header__logo {
+  color: #212329;
+  font: 700 18px/24px "Golos", Helvetica, Arial, sans-serif;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+
+.header__logo:hover {
+  color: #f06000;
+}
+
+.header__logo:active {
+  color: #ff6600;
+}
+
+.header__nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 42px;
+          column-gap: 42px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header__nav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  font: 500 18px/24px "Golos", Helvetica, Arial, sans-serif;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.header__nav-link:hover {
+  color: #f06000;
+}
+
+.header__nav-icon {
+  -webkit-transition: fill 0.3s ease;
+  transition: fill 0.3s ease;
+}
+
+.header__nav-link:hover .header__nav-icon {
+  fill: #f06000;
+}
+
+.header__nav-link_is_active .header__nav-icon {
+  fill: #f06000;
+}
+
+.header__nav-link_is_active {
+  color: #f06000;
 }
