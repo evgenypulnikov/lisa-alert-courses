@@ -1,0 +1,10 @@
+@font-face {
+    src:
+    url('../fonts/.woff') format('woff'),
+    url('../fonts/.woff2') format('woff2'),
+    url('../fonts/.eot') format('eot'),
+    url('../fonts/.otf') format('otf'),
+    url('../fonts/.ttf') format('ttf');
+    font-family: '';
+    font-weight: normal;
+  }
