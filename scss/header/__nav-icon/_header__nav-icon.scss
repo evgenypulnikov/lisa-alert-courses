@@ -1,0 +1,11 @@
+.header__nav-icon {
+  transition: fill 0.3s ease;
+}
+
+.header__nav-link:hover .header__nav-icon {
+  fill: $color-hover;
+}
+
+.header__nav-link_is_active .header__nav-icon {
+  fill: $color-hover;
+}

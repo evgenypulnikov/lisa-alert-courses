@@ -1,0 +1,13 @@
+.header__logo {
+  color: $dark-primary;
+  font: $text-logo;
+  transition: color 0.5s ease;
+}
+
+.header__logo:hover {
+  color: $color-hover;
+}
+
+.header__logo:active {
+  color: $color-primary;
+}

@@ -1,0 +1,11 @@
+.header__nav-link {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  font: $text-button;
+  transition: color 0.3s ease;
+}
+
+.header__nav-link:hover {
+  color: $color-hover;
+}
