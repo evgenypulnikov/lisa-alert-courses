@@ -10,6 +10,7 @@
 @import url("../blocks/page-link/page-link.css");
 @import url("../blocks/container/container.css");
 @import url("../blocks/container/_block_header/container_block_header.css");
+@import url("../blocks/container/_block_main/container_block_main.css");
 
 /* Buttons */
 
@@ -46,3 +47,9 @@
 @import url("../blocks/courses/__course-info/courses__course-info.css");
 @import url("../blocks/courses/__info-stat/courses__info-stat.css");
 @import url("../blocks/courses/__info-icon/courses__info-icon.css");
+
+.section {
+  width: 315px;
+  height: 400px;
+  background-color: blue;
+}
