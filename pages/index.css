@@ -98,3 +98,123 @@
 .header__nav-link_is_active {
   color: #f06000;
 }
+
+/* Courses List */
+.courses {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.courses__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 984px;
+  -webkit-column-gap: 24px;
+          column-gap: 24px;
+  padding-right: 32px;
+  border-radius: 16px;
+  -webkit-box-shadow: 0px 4px 16px 0px rgba(231, 232, 235, 0.6), 0px 0px 4px 0px rgba(231, 232, 235, 0.6);
+          box-shadow: 0px 4px 16px 0px rgba(231, 232, 235, 0.6), 0px 0px 4px 0px rgba(231, 232, 235, 0.6);
+}
+
+.courses__item:hover {
+  cursor: pointer;
+}
+
+.courses__course-image {
+  border-radius: 16px;
+}
+
+.courses__columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.courses__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 448px;
+  padding: 32px 0;
+}
+
+.courses__course-title {
+  margin: 0;
+  font: 700 24px/28px "Golos", Helvetica, Arial, sans-serif;
+}
+
+.courses__course-level {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 16px;
+  padding: 0 8px;
+  border-radius: 16px;
+  font: 400 18px/24px "Golos", Helvetica, Arial, sans-serif;
+  background-color: #e6e7eb;
+}
+
+.courses__course-description {
+  margin: 24px 0 0;
+  font: 400 18px/24px "Golos", Helvetica, Arial, sans-serif;
+}
+
+.courses__course-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  row-gap: 16px;
+}
+
+.courses__course-stat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font: 400 18px/24px "Golos", Helvetica, Arial, sans-serif;
+}
+
+.courses__info-icon {
+  margin-right: 10px;
+}
+
+.courses__button {
+  width: 224px;
+  margin-top: auto;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 16px;
+  font: 500 18px/24px "Golos", Helvetica, Arial, sans-serif;
+  -webkit-transition: background 0.3s ease, color 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.courses__button:hover {
+  cursor: pointer;
+}
+
+.courses__button_state_resume {
+  color: #ffffff;
+  background-color: #ff6600;
+}
+
+.courses__button_state_resume:hover {
+  background-color: #f06000;
+}

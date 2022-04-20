@@ -19,3 +19,100 @@
 @import "header/__nav-link/header__nav-link";
 @import "header/__nav-icon/header__nav-icon";
 @import "header/__nav-link/_is_active/header__nav-link_is_active";
+
+
+/* Courses List */
+
+.courses {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.courses__item {
+  display: flex;
+  max-width: 984px;
+  column-gap: 24px;
+  padding-right: 32px;
+  border-radius: $radius;
+  box-shadow: $box-shadow;
+}
+
+.courses__item:hover {
+  cursor: pointer;
+}
+
+.courses__course-image {
+  border-radius: $radius;
+}
+
+.courses__columns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.courses__column {
+  display: flex;
+  flex-direction: column;
+  max-width: 448px;
+  padding: 32px 0;
+}
+
+.courses__course-title {
+  margin: 0;
+  font: $text-heading;
+}
+
+.courses__course-level {
+  width: fit-content;
+  margin-top: 16px;
+  padding: 0 8px;
+  border-radius: $radius;
+  font: $text-main;
+  background-color: $color-tertiary;
+}
+
+.courses__course-description {
+  margin: 24px 0 0;
+  font: $text-main;
+}
+
+.courses__course-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 16px;
+}
+
+.courses__course-stat {
+  display: flex;
+  font: $text-main;
+}
+
+.courses__info-icon {
+  margin-right: 10px;
+}
+
+.courses__button {
+  width: 224px;
+  margin-top: auto;
+  padding: 12px 24px;
+  border: none;
+  border-radius: $radius;
+  font: $text-button;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.courses__button:hover {
+  cursor: pointer;
+}
+
+.courses__button_state_resume {
+  color: #ffffff;
+  background-color: $color-primary;
+}
+
+.courses__button_state_resume:hover {
+  background-color: $color-hover;
+}
