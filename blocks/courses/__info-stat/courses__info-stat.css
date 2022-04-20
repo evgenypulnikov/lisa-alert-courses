@@ -1,0 +1,4 @@
+.courses__info-stat {
+  display: flex;
+  font: var(--text-main);
+}

@@ -1,0 +1,4 @@
+.courses__course-title {
+  margin: 0;
+  font: var(--text-heading);
+}

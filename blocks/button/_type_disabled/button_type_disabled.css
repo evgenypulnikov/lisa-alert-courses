@@ -1,0 +1,4 @@
+.button_type_disabled {
+  color: var(--dark-secondary);
+  background-color: var(--color-tertiary);
+}

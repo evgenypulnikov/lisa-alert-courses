@@ -1,0 +1,6 @@
+.page-link {
+  width: fit-content;
+  height: fit-content;
+  color: var(--dark-primary);
+  text-decoration: none;
+}
