@@ -99,8 +99,26 @@
   color: #f06000;
 }
 
+/* Main */
+.main {
+  padding: 24px 0 40px 0;
+}
+
+.main-title {
+  margin: 0 0 32px 0;
+  font: 700 48px/52px "Golos", Helvetica, Arial, sans-serif;
+}
+
 /* Courses List */
 .courses {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 24px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -184,7 +202,7 @@
   row-gap: 16px;
 }
 
-.courses__course-stat {
+.courses__info-stat {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,14 +225,32 @@
 }
 
 .courses__button:hover {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   cursor: pointer;
 }
 
-.courses__button_state_resume {
+.courses__button_course-status_resume {
   color: #ffffff;
   background-color: #ff6600;
 }
 
-.courses__button_state_resume:hover {
+.courses__button_course-status_resume:hover {
   background-color: #f06000;
+}
+
+.courses__button_course-status_sign-up {
+  border: 1.2px solid #e6e7eb;
+  color: #ff6600;
+  background-color: #ffffff;
+}
+
+.courses__button_course-status_sign-up:hover {
+  color: #ffffff;
+  background-color: #ff6600;
+}
+
+.courses__button_course-status_done {
+  color: #9397a3;
+  background-color: #e6e7eb;
 }

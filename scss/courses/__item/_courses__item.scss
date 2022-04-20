@@ -1,0 +1,12 @@
+.courses__item {
+  display: flex;
+  max-width: 984px;
+  column-gap: 24px;
+  padding-right: 32px;
+  border-radius: $radius;
+  box-shadow: $box-shadow;
+}
+
+.courses__item:hover {
+  cursor: pointer;
+}

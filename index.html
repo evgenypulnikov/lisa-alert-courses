@@ -29,25 +29,28 @@
     </div>
   </header>
   <main class="main">
-    <ul class="courses">
-      <li class="courses__item">
-        <img src="images/courses-list/cynology.jpg" alt="Кинология" class="courses__course-image">
-        <div class="courses__columns">
-          <div class="courses__column">
-            <h2 class="courses__course-title">Кинологическое направление</h2>
-            <span class="courses__course-level">Бывалый</span>
-            <p class="courses__course-description">Поисково-спасательная работа, следовая работа, а так же поиск тел погибших с помощью собак</p>
-          </div>
-          <div class="courses__column">
-            <div class="courses__course-info">
-              <span class="courses__course-stat"><img src="images/i-book.svg" alt="Иконка с книгой" class="courses__info-icon">144 занятия</span>
-              <span class="courses__course-stat"><img src="images/i-clock.svg" alt="Иконка с часами" class="courses__info-icon">144 ч</span>
-            </div>
-            <button class="courses__button courses__button_state_resume">Продолжить</button>
-          </div>
-        </div>
-      </li>
-    </ul>
+    <h1 class="page-title">Курсы</h1>
+    <ul class="courses"></ul>
   </main>
+  <template id="course-template">
+    <li class="courses__item">
+      <img src="" alt="" class="courses__course-image">
+      <div class="courses__columns">
+        <div class="courses__column">
+          <h2 class="courses__course-title"></h2>
+          <span class="courses__course-level"></span>
+          <p class="courses__course-description"></p>
+        </div>
+        <div class="courses__column">
+          <div class="courses__course-info">
+            <span class="courses__info-stat"><img src="images/i-book.svg" alt="Иконка с книгой" class="courses__info-icon">144 занятия</span>
+            <span class="courses__info-stat"><img src="images/i-clock.svg" alt="Иконка с часами" class="courses__info-icon">144 ч</span>
+          </div>
+          <button class="courses__button">Продолжить</button>
+        </div>
+      </div>
+    </li>
+  </template>
+  <script type="module" src="script/script.js"></script>
 </body>
 </html>

@@ -20,99 +20,26 @@
 @import "header/__nav-icon/header__nav-icon";
 @import "header/__nav-link/_is_active/header__nav-link_is_active";
 
+/* Main */
+
+@import "main/main";
+@import "main-title/main-title";
+
 
 /* Courses List */
 
-.courses {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.courses__item {
-  display: flex;
-  max-width: 984px;
-  column-gap: 24px;
-  padding-right: 32px;
-  border-radius: $radius;
-  box-shadow: $box-shadow;
-}
-
-.courses__item:hover {
-  cursor: pointer;
-}
-
-.courses__course-image {
-  border-radius: $radius;
-}
-
-.courses__columns {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.courses__column {
-  display: flex;
-  flex-direction: column;
-  max-width: 448px;
-  padding: 32px 0;
-}
-
-.courses__course-title {
-  margin: 0;
-  font: $text-heading;
-}
-
-.courses__course-level {
-  width: fit-content;
-  margin-top: 16px;
-  padding: 0 8px;
-  border-radius: $radius;
-  font: $text-main;
-  background-color: $color-tertiary;
-}
-
-.courses__course-description {
-  margin: 24px 0 0;
-  font: $text-main;
-}
-
-.courses__course-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  row-gap: 16px;
-}
-
-.courses__course-stat {
-  display: flex;
-  font: $text-main;
-}
-
-.courses__info-icon {
-  margin-right: 10px;
-}
-
-.courses__button {
-  width: 224px;
-  margin-top: auto;
-  padding: 12px 24px;
-  border: none;
-  border-radius: $radius;
-  font: $text-button;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-.courses__button:hover {
-  cursor: pointer;
-}
-
-.courses__button_state_resume {
-  color: #ffffff;
-  background-color: $color-primary;
-}
-
-.courses__button_state_resume:hover {
-  background-color: $color-hover;
-}
+@import "courses/courses";
+@import "courses/__item/courses__item";
+@import "courses/__course-image/courses__course-image";
+@import "courses/__columns/courses__columns";
+@import "courses/__column/courses__column";
+@import "courses/__course-title/courses__course-title";
+@import "courses/__course-level/courses__course-level";
+@import "courses/__course-description/courses__course-description";
+@import "courses/__course-info/courses__course-info";
+@import "courses/__info-stat/courses__info-stat";
+@import "courses/__info-icon/courses__info-icon";
+@import "courses/__button/courses__button";
+@import "courses/__button/_course-status_resume/courses__button_course-status_resume";
+@import "courses/__button/_course-status_sign-up/courses__button_course-status_sign-up";
+@import "courses/__button/_course-status_done/courses__button_course-status_done";
