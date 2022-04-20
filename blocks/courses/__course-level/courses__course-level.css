@@ -1,0 +1,8 @@
+.courses__course-level {
+  width: fit-content;
+  margin-top: 16px;
+  padding: 0 8px;
+  border-radius: var(--radius);
+  font: var(--text-main);
+  background-color: var(--color-tertiary);
+}
