@@ -71,7 +71,7 @@ export const coursesList = [
     courseImage: 'images/courses-list/newbies.jpg',
     courseTitle: 'Новичковая',
     courseLevel: 'Новичок',
-    courseDescription: 'Короткое описание курса. людей в лесу и в городе. Все поисковые мероприятия организуются силами добровольцев «ЛизаАлерт»',
+    courseDescription: 'Короткое описание курса. людей в лесу и в городе. Все поисковые мероприятия организуются силами добровольцев «ЛизаАлер…',
     courseStatus: 'Пройден',
     statusClass: 'button_type_disabled'
   }
