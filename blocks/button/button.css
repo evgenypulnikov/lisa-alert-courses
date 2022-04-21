@@ -4,7 +4,7 @@
   padding: 12px 24px;
   border-radius: var(--radius);
   font: var(--text-button);
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: border 0.3s ease, background 0.3s ease, color 0.3s ease;
 }
 
 .button:hover {
