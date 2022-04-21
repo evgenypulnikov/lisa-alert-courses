@@ -1,0 +1,23 @@
+.sidebar__checkbox {
+  background-image: url("../../../images/checkbox.svg");
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-position: center;
+  margin-right: 10px;
+  transition: background-image .3s ease;
+}
+
+.sidebar__checkbox-label:hover .sidebar__checkbox {
+  background-image: url("../../../images/checkboxhover.svg");
+
+}
+
+.sidebar__checkbox-hidden:checked ~ .sidebar__checkbox-label .sidebar__checkbox {
+  background-image: url("../../../images/checkbox-checked.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}

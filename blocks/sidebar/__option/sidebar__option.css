@@ -1,0 +1,8 @@
+.sidebar__option {
+  margin-bottom: 16px;
+}
+
+
+.sidebar__option:last-child {
+  margin-bottom: 32px;
+}

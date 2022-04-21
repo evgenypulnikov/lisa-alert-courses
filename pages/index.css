@@ -47,3 +47,25 @@
 @import url("../blocks/courses/__course-info/courses__course-info.css");
 @import url("../blocks/courses/__info-stat/courses__info-stat.css");
 @import url("../blocks/courses/__info-icon/courses__info-icon.css");
+
+/* filter */
+@import url("../blocks/sidebar/sidebar.css");
+@import url("../blocks/sidebar/__heading/sidebar__heading.css");
+@import url("../blocks/sidebar/__title/sidebar_title.css");
+@import url("../blocks/sidebar/__filters/sidebar__filter.css");
+@import url("../blocks/sidebar/__filter-title/sidebar__filter-title.css");
+@import url("../blocks/sidebar/__filter/sidebar__filter.css");
+@import url("../blocks/sidebar/__icon-arrow/sidebar__icon-arrow.css");
+@import url("../blocks/sidebar/__filter-options/sidebar__filter-options.css");
+@import url("../blocks/sidebar/__option/sidebar__option.css");
+@import url("../blocks/sidebar/__filter-wrapper/sidebar__filter-wrapper.css");
+@import url("../blocks/sidebar/__checkbox-hidden/sidebar__checkbox-hidden.css");
+@import url("../blocks/sidebar/__checkbox-label/sidebar__checkbox-label.css");
+@import url("../blocks/sidebar/__checkbox/sidebar__checkbox.css");
+@import url("../blocks/sidebar/__filter-text/sisebar__filter-text.css");
+@import url("../blocks/sidebar/__delete-all-filters/sidebar__delete-all-filters.css");
+@import url("../blocks/sidebar/__chosen-filters/sidebar__chosen-filters.css");
+@import url("../blocks/sidebar/__filter-value/sidebar__filter-value.css");
+@import url("../blocks/sidebar/__close-button/sidebar__close-button.css");
+@import url("../blocks/sidebar/__filter-options/_opened/sidebar__filter-options_opened.css");
+@import url("../blocks/sidebar/__delete-all-filters/_opened/sidebar__delete-all-filters_opened.css");

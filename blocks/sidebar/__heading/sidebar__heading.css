@@ -1,0 +1,6 @@
+.sidebar__heading {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #E6E7EB;
+  padding-bottom: 32px;
+}
