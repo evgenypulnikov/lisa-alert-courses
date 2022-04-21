@@ -8,13 +8,15 @@ import { coursesContainer,
   coursesList
 } from './vars.js';
 
+import { maxTextLength } from './maxTextLength.js';
+
 /* Create Course Item */
 
 export function createCourseItem(image, title, level, desc, status, statusClass) {
   courseImage.src = image;
   courseTitle.textContent = title;
   courseLevel.textContent = level;
-  courseDescription.textContent = desc;
+  courseDescription.textContent = maxTextLength(desc, 120);
   courseButton.textContent = status;
   courseButton.classList.value = 'button';
   courseButton.classList.add(statusClass);
