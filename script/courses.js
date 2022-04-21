@@ -4,6 +4,8 @@ import { coursesContainer,
   courseTitle,
   courseLevel,
   courseDescription,
+  courseLessonsAmount,
+  courseHoursAmount,
   courseButton,
   coursesList
 } from './vars.js';
@@ -12,11 +14,13 @@ import { maxTextLength } from './maxTextLength.js';
 
 /* Create Course Item */
 
-export function createCourseItem(image, title, level, desc, status, statusClass) {
+export function createCourseItem(image, title, level, desc, status, statusClass, lessons, hours) {
   courseImage.src = image;
   courseTitle.textContent = title;
   courseLevel.textContent = level;
   courseDescription.textContent = maxTextLength(desc, 120);
+  courseLessonsAmount.lastChild.textContent = lessons;
+  courseHoursAmount.lastChild.textContent = hours;
   courseButton.textContent = status;
   courseButton.classList.value = 'button';
   courseButton.classList.add(statusClass);
@@ -48,7 +52,9 @@ coursesList.forEach(function(coursesList) {
     coursesList.courseLevel,
     coursesList.courseDescription,
     coursesList.courseStatus,
-    coursesList.statusClass
+    coursesList.statusClass,
+    coursesList.lessonsAmount,
+    coursesList.hoursAmount
     );
 
   renderCourseItem(item, coursesContainer);
