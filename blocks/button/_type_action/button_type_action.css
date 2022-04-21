@@ -5,6 +5,5 @@
 }
 
 .button_type_action:hover {
-  color: #ffffff;
-  background-color: var(--color-primary);
+  border-color: var(--color-primary);
 }

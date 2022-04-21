@@ -16,10 +16,19 @@ export function createCourseItem(image, title, level, desc, status, statusClass)
   courseLevel.textContent = level;
   courseDescription.textContent = desc;
   courseButton.textContent = status;
-  courseButton.classList.value = 'courses__button';
+  courseButton.classList.value = 'button';
   courseButton.classList.add(statusClass);
 
   const courseItem = courseTemplate.cloneNode(true);
+
+  const courseCardButton = courseItem.querySelector('.button');
+  courseCardButton.addEventListener('click', function(evt) {
+    if (evt.target.classList.contains('button_type_action')) {
+      evt.target.classList.remove('button_type_action');
+      evt.target.classList.add('button_type_apply');
+      evt.target.textContent = 'Продолжить';
+    }
+  });
 
   return courseItem;
 }
