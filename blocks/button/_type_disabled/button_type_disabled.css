@@ -1,4 +1,5 @@
 .button_type_disabled {
+  border: 1.2px solid transparent;
   color: var(--dark-secondary);
   background-color: var(--color-tertiary);
 }

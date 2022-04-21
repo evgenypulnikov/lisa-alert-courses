@@ -1,5 +1,6 @@
 .button_type_apply {
   color: #ffffff;
+  border: 1.2px solid transparent;
   background-color: var(--color-primary);
 }
 

@@ -14,7 +14,7 @@
 
 /* Buttons */
 
-@import url("../blocks/button/courses__button.css");
+@import url("../blocks/button/button.css");
 @import url("../blocks/button/_type_action/button_type_action.css");
 @import url("../blocks/button/_type_apply/button_type_apply.css");
 @import url("../blocks/button/_type_disabled/button_type_disabled.css");
@@ -47,9 +47,3 @@
 @import url("../blocks/courses/__course-info/courses__course-info.css");
 @import url("../blocks/courses/__info-stat/courses__info-stat.css");
 @import url("../blocks/courses/__info-icon/courses__info-icon.css");
-
-.section {
-  width: 315px;
-  height: 400px;
-  background-color: blue;
-}
