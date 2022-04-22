@@ -29,10 +29,11 @@ export function createCourseItem(image, title, level, desc, status, statusClass,
 
   const courseCardButton = courseItem.querySelector('.button');
   courseCardButton.addEventListener('click', function(evt) {
-    if (evt.target.classList.contains('button_type_action')) {
-      evt.target.classList.remove('button_type_action');
-      evt.target.classList.add('button_type_apply');
-      evt.target.textContent = 'Продолжить';
+    const target = evt.target;
+    if (target.classList.contains('button_type_action')) {
+      target.classList.remove('button_type_action');
+      target.classList.add('button_type_apply');
+      target.textContent = 'Продолжить';
     }
   });
 
