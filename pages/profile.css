@@ -18,6 +18,7 @@
 @import url("../blocks/button/_type_action/button_type_action.css");
 @import url("../blocks/button/_type_apply/button_type_apply.css");
 @import url("../blocks/button/_type_disabled/button_type_disabled.css");
+@import url("../blocks/button/_type_logout/button_type_logout.css");
 
 /* Header */
 
@@ -32,3 +33,13 @@
 
 @import url("../blocks/main/main.css");
 @import url("../blocks/main-title/main-title.css");
+
+/* Account Overview */
+
+@import url("../blocks/account-overview/account-overview.css");
+@import url("../blocks/account-overview/__avatar-container/account-overview__avatar-container.css");
+@import url("../blocks/account-overview/__photo/account-overview__photo.css");
+@import url("../blocks/account-overview/__title/account-overview__title.css");
+@import url("../blocks/account-overview/__status-list/account-overview__status-list.css");
+@import url("../blocks/account-overview/__status-item/account-overview__status-item.css");
+@import url("../blocks/account-overview/__description/account-overview__description.css");
