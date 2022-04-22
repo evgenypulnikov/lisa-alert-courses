@@ -1,0 +1,5 @@
+.account-overview__status-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}

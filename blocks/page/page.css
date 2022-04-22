@@ -1,3 +1,4 @@
 .page {
   font-family: 'Golos', Helvetica, Arial, sans-serif;
+  background-color: var(--bg-secondary);
 }
