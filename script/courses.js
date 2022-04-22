@@ -28,6 +28,7 @@ export function createCourseItem(image, title, level, desc, status, statusClass,
   const courseItem = courseTemplate.cloneNode(true);
 
   const courseCardButton = courseItem.querySelector('.button');
+
   courseCardButton.addEventListener('click', function(evt) {
     const target = evt.target;
     if (target.classList.contains('button_type_action')) {
@@ -60,3 +61,23 @@ coursesList.forEach(function(coursesList) {
 
   renderCourseItem(item, coursesContainer);
 });
+
+/* Courses Array Filter */
+
+export function coursesArrayFilter() {
+  const allCoursesButtons = coursesContainer.querySelectorAll('.button');
+
+  for (let i = 0; i < coursesList.length; i++) {
+    if (allCoursesButtons[i].classList.contains('button_type_action')) {
+      allCoursesButtons[i].addEventListener('click', function() {
+        console.log(allCoursesButtons[i]);
+        coursesList[i].courseStatus = 'Продолжить';
+        console.log(coursesList[i].courseStatus);
+        console.log(coursesList[i]);
+      });
+      console.log(coursesList[i].courseStatus);
+    }
+  }
+}
+
+coursesArrayFilter();

@@ -21,7 +21,7 @@ export const coursesList = [
     lessonsAmount: '100 занятий',
     hoursAmount: '100 ч',
     courseStatus: 'Продолжить',
-    statusClass: 'button_type_apply'
+    statusClass: 'button_type_apply',
   },
   {
     courseImage: 'images/courses-list/duty-officers.jpg',
