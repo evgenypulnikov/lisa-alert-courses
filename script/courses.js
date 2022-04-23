@@ -60,3 +60,4 @@ coursesList.forEach(function(coursesList) {
 
   renderCourseItem(item, coursesContainer);
 });
+
