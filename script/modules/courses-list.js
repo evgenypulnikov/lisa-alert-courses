@@ -70,12 +70,8 @@ export function coursesArrayFilter() {
   for (let i = 0; i < coursesList.length; i++) {
     if (allCoursesButtons[i].classList.contains('button_type_action')) {
       allCoursesButtons[i].addEventListener('click', function() {
-        console.log(allCoursesButtons[i]);
         coursesList[i].courseStatus = 'Продолжить';
-        console.log(coursesList[i].courseStatus);
-        console.log(coursesList[i]);
       });
-      console.log(coursesList[i].courseStatus);
     }
   }
 }

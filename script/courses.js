@@ -4,7 +4,7 @@ import {
   createCourseItem,
   renderCourseItem,
   coursesArrayFilter
-} from './modules/courses.js';
+} from './modules/courses-list.js';
 
 /* Filters */
 
