@@ -51,6 +51,7 @@
 /* Filter */
 
 @import url("../blocks/sidebar/sidebar.css");
+@import url("../blocks/sidebar/__wrapper/sidebar__wrapper.css");
 @import url("../blocks/sidebar/__heading/sidebar__heading.css");
 @import url("../blocks/sidebar/__title/sidebar_title.css");
 @import url("../blocks/sidebar/__filters/sidebar__filter.css");
