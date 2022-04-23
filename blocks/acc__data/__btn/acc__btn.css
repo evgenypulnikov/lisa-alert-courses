@@ -1,0 +1,31 @@
+.acc__btn {
+  border: none;
+  margin: 32px auto 0;
+  background: #FF6600;
+  border-radius: 16px;
+  font-family: 'Golos', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 12px 24px;
+  width: 246px;
+  cursor: pointer;
+  transition: all ease-in-out .3s;
+}
+
+.acc__btn:hover {
+  opacity: .8;
+}
+
+.acc__btn:active {
+  color: #9397A3;
+  background: #E6E7EB;
+}
+
+.acc__btn:focus {
+  color: #9397A3;
+  background: #E6E7EB;
+}

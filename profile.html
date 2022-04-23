@@ -11,7 +11,7 @@
 <body class="page">
   <header class="header">
     <div class="container container_block_header">
-      <a href="#!" class="header__logo page-link">Учебная платформа</a>
+      <a href="#" class="header__logo page-link">Учебная платформа</a>
       <nav class="header__nav">
         <ul class="header__nav-list">
           <li class="header__nav-item">
@@ -68,6 +68,26 @@
           </svg>
           Выйти из аккаунта
         </button>
+      </div>
+
+      <div class="acc__data">
+        <form class="acc__form">
+          <h3 class="acc__title">Аккаунт</h3>
+          <label class="acc__label acc_label_phone" for="phone"></label>
+          <input class="acc__input acc_input_phone" type="number" name="phone" id="phone" placeholder="+7 123 456 78 90">
+          <label class="acc__label acc_label_mail" for="email">Email</label>
+          <input class="acc__input acc_input_mail" type="email" id="email">
+          <label class="acc__label acc_label_pass" for="pass">Пароль</label>
+          <input class="acc__input acc_input_pass" type="password" id="pass">
+          <button type="submit" class="acc__btn">Сохранить изменения</button>
+        </form>
+        <div class="tip">
+          <p class="tip__text">Номер телефона используется как уникальный идентификатор пользователя, поэтому его нельзя
+            поменять вручную</p>
+          <p class="tip__text">Если по какой-то причине у вас нет доступа к номеру телефона на который вы регистрировали
+            аккаунт, напишите в поддержку</p>
+          <p class="tip__text">Email нужен для восстановления пароля</p>
+        </div>
       </div>
 
     </div>

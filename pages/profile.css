@@ -43,3 +43,22 @@
 @import url("../blocks/account-overview/__status-list/account-overview__status-list.css");
 @import url("../blocks/account-overview/__status-item/account-overview__status-item.css");
 @import url("../blocks/account-overview/__description/account-overview__description.css");
+
+/* Account Data */
+
+@import url('../vendor/normalize.css');
+@import url('../fonts/fonts.css');
+@import url('../blocks/acc__data/acc__data.css');
+@import url('../blocks/acc__data/__btn/acc__btn.css');
+@import url('../blocks/acc__data/__form/acc__form.css');
+@import url('../blocks/acc__data/__title/acc__title.css');
+@import url('../blocks/acc__data/_input/acc_input.css');
+@import url('../blocks/acc__data/_input/acc_input_mail.css');
+@import url('../blocks/acc__data/_input/acc_input_pass.css');
+@import url('../blocks/acc__data/_input/acc_input_phone.css');
+@import url('../blocks/acc__data/_label/acc_label.css');
+@import url('../blocks/acc__data/_label/acc_label_mail.css');
+@import url('../blocks/acc__data/_label/acc_label_pass.css');
+@import url('../blocks/acc__data/_label/acc_label_phone.css');
+@import url('../blocks/acc__data/tip/tip.css');
+@import url('../blocks/acc__data/tip/__text/tip__text.css');
