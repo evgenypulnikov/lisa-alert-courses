@@ -1,5 +1,15 @@
 /* Global Scope */
 
+/* ___ 1. Filters */
+
+export const checkboxes = document.querySelectorAll('.sidebar__hidden-checkbox');
+export const filterTemplate = document.querySelector("#filter-item").content;
+export const chosenFilters = document.querySelector('.sidebar__chosen-filters');
+export const deleteAllFiltersButton = document.querySelector('.sidebar__delete-all-filters');
+export const filterBlocks = document.querySelectorAll('.sidebar__filter');
+
+/* ___ 2. Courses List */
+
 export const coursesContainer = document.querySelector('.courses');
 export const courseTemplate = document.querySelector('#course-template').content;
 export const courseImage = courseTemplate.querySelector('.courses__course-image');
@@ -10,7 +20,7 @@ export const courseLessonsAmount = courseTemplate.querySelector('.courses__info-
 export const courseHoursAmount = courseTemplate.querySelector('.courses__info-stat_hours-amount');
 export const courseButton = courseTemplate.querySelector('.button');
 
-/* Courses List Array */
+/* ___ 2.1 Courses List Array */
 
 export const coursesList = [
   {
@@ -94,3 +104,11 @@ export const coursesList = [
     statusClass: 'button_type_disabled'
   }
 ]
+
+/* ___ 3. Profile */
+
+export const userAvatar = document.querySelector('.account-overview__photo');
+export const userName = document.querySelector('.account-overview__title');
+export const userLevel = document.querySelector('.account-overview__user-level');
+export const userProf = document.querySelector('.account-overview__user-profession');
+export const userCountCourses = document.querySelector('.account-overview__user-courses');

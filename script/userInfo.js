@@ -1,4 +1,4 @@
-export const User = {
+export const user = {
   name: 'Иванова Анна Сидоровна',
   level: 'Профессионал',
   profession: 'Картограф',

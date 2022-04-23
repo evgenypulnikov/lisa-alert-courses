@@ -1,11 +1,14 @@
-const checkboxes = document.querySelectorAll('.sidebar__checkbox-hidden');
-const filterTemplate = document.querySelector("#filter-item").content;
-const chosenFilters = document.querySelector('.sidebar__chosen-filters');
-const deleteAllFiltersButton = document.querySelector('.sidebar__delete-all-filters');
-const filterBlocks = document.querySelectorAll('.sidebar__filter');
+import {
+  checkboxes,
+  filterTemplate,
+  chosenFilters,
+  deleteAllFiltersButton,
+  filterBlocks
+} from '../vars.js'
 
-//проверка состояния чекбоксов
-function checkCheckboxes() {
+/* ___ 1. Check Checkboxes */
+
+export function checkCheckboxes() {
   let i = 0;
   checkboxes.forEach(function (element) {
     if (element.checked) {
@@ -18,8 +21,9 @@ function checkCheckboxes() {
   }
 }
 
-//функция удаления фильтра из панели
-function removeFilter(element) {
+/* ___ 2. Remove Filter */
+
+export function removeFilter(element) {
   const option = element.closest('.sidebar__option');
   const name = option.querySelector('.sidebar__checkbox-label');
   const filterTextes = document.querySelectorAll('.sidebar__filter-text');
@@ -30,9 +34,9 @@ function removeFilter(element) {
   })
 }
 
+/* ___ 3. Add Filter */
 
-//функция добавления фильтра в нижнюю панель
-function addFilter(element) {
+export function addFilter(element) {
   const option = element.closest('.sidebar__option');
   const name = option.querySelector('.sidebar__checkbox-label');
   const filterName = filterTemplate
@@ -52,7 +56,8 @@ function addFilter(element) {
   }
 }
 
-//раскрытие фильтров
+/* ___ 4. Open Filters */
+
 filterBlocks.forEach(function (element) {
   element.addEventListener('click', function () {
     element.classList.toggle("sidebar__filter_active");
@@ -62,7 +67,8 @@ filterBlocks.forEach(function (element) {
   })
 })
 
-//перебор массива чекбоксов
+/* ___ 5. Checkboxes For Each */
+
 checkboxes.forEach(function (element) {
   element.addEventListener('click', function () {
     addFilter(element);
@@ -70,7 +76,8 @@ checkboxes.forEach(function (element) {
   })
 })
 
-//удаление всех фильтров на кнопку очистить и снятие галочек с чекбоксов
+/* ___ 6. Remove All Filters */
+
 deleteAllFiltersButton.addEventListener('click', function () {
   const allActiveFilters = document.querySelectorAll('.sidebar__filter-value');
   deleteAllFiltersButton.classList.remove('sidebar__delete-all-filters_opened');

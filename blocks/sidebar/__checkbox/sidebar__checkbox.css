@@ -1,23 +1,24 @@
 .sidebar__checkbox {
-  background-image: url("../../../images/checkbox.svg");
   width: 20px;
   height: 20px;
+  border: 2px solid var(--dark-primary);
+  border-radius: 4px;
+  box-sizing: border-box;
   display: inline-block;
-  background-position: center;
   margin-right: 10px;
-  transition: background-image .3s ease;
+  transition: border-color 0.3s ease;
 }
 
 .sidebar__checkbox-label:hover .sidebar__checkbox {
-  background-image: url("../../../images/checkboxhover.svg");
-
+  border: 2px solid var(--color-hover);
 }
 
-.sidebar__checkbox-hidden:checked ~ .sidebar__checkbox-label .sidebar__checkbox {
-  background-image: url("../../../images/checkbox-checked.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.sidebar__hidden-checkbox:checked ~ .sidebar__checkbox-label .sidebar__checkbox {
   display: inline-block;
   width: 20px;
   height: 20px;
+  border: 2px solid var(--color-hover);
+  background-image: url("../../../images/i-check.svg");
+  background-repeat: no-repeat;
+  background-position: center 4px;
 }
