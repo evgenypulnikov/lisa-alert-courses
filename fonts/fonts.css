@@ -1,10 +1,15 @@
 @font-face {
-    src:
-    url('../fonts/.woff') format('woff'),
-    url('../fonts/.woff2') format('woff2'),
-    url('../fonts/.eot') format('eot'),
-    url('../fonts/.otf') format('otf'),
-    url('../fonts/.ttf') format('ttf');
-    font-family: '';
-    font-weight: normal;
-  }
+  font-family: 'GolosTextWebBold';
+  src: url('../fonts/Golos-Text_Bold.woff2') format('woff2'),
+  url('../fonts/Golos-Text_Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GolosTextWebRegular';
+  src: url('../fonts/Golos-Text_Regular.woff2') format('woff2'),
+  url('../fonts/Golos-Text_Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

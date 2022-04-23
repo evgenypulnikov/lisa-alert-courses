@@ -5,22 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13c57414-c13b-4685-b8e9-9a9a58280e5b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/blocks/acc__data/__btn/acc__btn.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/acc__data/__data/acc__data.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/acc__data/__form/acc__form.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/acc__data/__title/acc__title.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/acc__data/_input/acc_input.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/acc__data/_input/acc_input_mail.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/acc__data/_input/acc_input_pass.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/acc__data/_input/acc_input_phone.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/blocks/acc__data/_label/acc_label.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/acc__data/_label/acc_label_mail.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/acc__data/_label/acc_label_pass.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/acc__data/_label/acc_label_phone.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/blocks/acc__data/acc__data.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/blocks/acc__data/tip/__text/tip__text.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/blocks/acc__data/tip/tip.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fonts/fonts.css" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/fonts.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
@@ -43,6 +33,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
@@ -59,27 +50,29 @@
     <option name="myRunOnSave" value="true" />
   </component>
   <component name="ProjectId" id="28CcpfKJE02qJKYhNVZ4naQsmjJ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "code.cleanup.on.save": "true",
-    "last_opened_file_path": "D:/web/lisa-alert-courses",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/web/lisa-alert-courses&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\web\lisa-alert-courses" />
@@ -103,7 +96,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1650724193883</updated>
-      <workItem from="1650724197340" duration="8532000" />
+      <workItem from="1650724197340" duration="9192000" />
+      <workItem from="1650737038318" duration="622000" />
     </task>
     <servers />
   </component>
