@@ -1,4 +1,4 @@
-.account-overview__avatar-container {
+.card__avatar-container {
   display: flex;
   flex-direction: column;
   margin: 0 auto 32px;
