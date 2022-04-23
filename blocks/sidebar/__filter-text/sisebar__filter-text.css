@@ -1,0 +1,8 @@
+.sidebar__filter-text {
+  margin: 0;
+  padding-left: 8px;
+  margin-right: 6px;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 24px;
+}

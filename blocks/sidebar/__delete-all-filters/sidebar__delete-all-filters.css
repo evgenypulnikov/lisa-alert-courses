@@ -1,0 +1,11 @@
+.sidebar__delete-all-filters {
+  border: none;
+  background-color: transparent;
+  display: none;
+  cursor: pointer;
+}
+
+.sidebar__delete-all-filters:hover {
+  color: #F06000;
+  transition: color .3s ease;
+}
