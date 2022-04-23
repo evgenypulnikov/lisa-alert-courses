@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="13c57414-c13b-4685-b8e9-9a9a58280e5b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/blocks/acc__data/__btn/acc__btn.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/acc__data/__data/acc__data.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/acc__data/__form/acc__form.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/acc__data/__title/acc__title.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/acc__data/_input/acc_input.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/acc__data/_input/acc_input_mail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/acc__data/_input/acc_input_pass.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/acc__data/_input/acc_input_phone.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/acc__data/_label/acc_label.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/acc__data/_label/acc_label_mail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/acc__data/_label/acc_label_pass.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/acc__data/_label/acc_label_phone.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/acc__data/acc__data.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/acc__data/tip/__text/tip__text.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/acc__data/tip/tip.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/fonts.css" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/fonts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/normalize.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="54156540-8b42-499f-91e9-aac4d92bd859" />
+        <option name="url" value="https://github.com/evgenypulnikov/lisa-alert-courses.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="ProjectId" id="28CcpfKJE02qJKYhNVZ4naQsmjJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "code.cleanup.on.save": "true",
+    "last_opened_file_path": "D:/web/lisa-alert-courses",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\web\lisa-alert-courses" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/lisa-alert-courses/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="13c57414-c13b-4685-b8e9-9a9a58280e5b" name="Changes" comment="" />
+      <created>1650724193883</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650724193883</updated>
+      <workItem from="1650724197340" duration="8532000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="BEK_SORT_TYPE" value="1" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
