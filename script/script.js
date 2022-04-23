@@ -1,16 +1,15 @@
-import { coursesContainer,
-  courseTemplate,
-  courseImage,
-  courseTitle,
-  courseLevel,
-  courseDescription,
-  courseButton,
-  coursesList
-} from './vars.js';
+/* Courses */
 
 import {
   createCourseItem,
-  renderCourseItem
-} from './courses.js';
+  renderCourseItem,
+  coursesArrayFilter
+} from './modules/courses.js';
 
+/* Filters */
 
+import {
+  checkCheckboxes,
+  removeFilter,
+  addFilter
+} from './modules/filters.js';

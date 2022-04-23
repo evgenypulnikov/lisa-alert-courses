@@ -5,7 +5,7 @@
   cursor: pointer;
 }
 
-.sidebar__checkbox-hidden:checked ~ .sidebar__checkbox-label {
+.sidebar__hidden-checkbox:checked ~ .sidebar__checkbox-label {
   color: #f06000;
 }
 

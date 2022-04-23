@@ -8,11 +8,11 @@ import { coursesContainer,
   courseHoursAmount,
   courseButton,
   coursesList
-} from './vars.js';
+} from '../vars.js';
 
-import { maxTextLength } from './maxTextLength.js';
+import { maxTextLength } from '../maxTextLength.js';
 
-/* Create Course Item */
+/* ___ 1. Create Course Item */
 
 export function createCourseItem(image, title, level, desc, status, statusClass, lessons, hours) {
   courseImage.src = image;
@@ -41,7 +41,7 @@ export function createCourseItem(image, title, level, desc, status, statusClass,
   return courseItem;
 }
 
-/* Render Course Item */
+/* ___ 2. Render Course Item */
 
 export function renderCourseItem(item, container) {
   container.append(item);
@@ -62,7 +62,7 @@ coursesList.forEach(function(coursesList) {
   renderCourseItem(item, coursesContainer);
 });
 
-/* Courses Array Filter */
+/* ___ 3. Courses Array Filter */
 
 export function coursesArrayFilter() {
   const allCoursesButtons = coursesContainer.querySelectorAll('.button');
