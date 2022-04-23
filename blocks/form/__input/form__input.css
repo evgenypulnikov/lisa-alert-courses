@@ -1,0 +1,7 @@
+.form__input {
+  font: var(--text-main);
+  margin-bottom: 32px;
+  border: 1.2px solid var(--color-tertiary);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+}

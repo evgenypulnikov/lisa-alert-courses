@@ -1,6 +1,7 @@
-.account-overview {
-  max-width: 312px;
+.card {
   border-radius: var(--radius);
   box-shadow: var(--box-shadow);
   padding: 32px 32px;
+  box-sizing: border-box;
+  background-color: #fff;
 }
