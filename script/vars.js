@@ -6,7 +6,6 @@ export const checkboxes = document.querySelectorAll('.sidebar__hidden-checkbox')
 export const filterTemplate = document.querySelector("#filter-item").content;
 export const chosenFilters = document.querySelector('.sidebar__chosen-filters');
 export const deleteAllFiltersButton = document.querySelector('.sidebar__delete-all-filters');
-export const filterBlocks = document.querySelectorAll('.sidebar__filter');
 
 /* ___ 2. Courses List */
 

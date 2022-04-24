@@ -4,4 +4,5 @@
   width: 100%;
   background-color: #ffffff;
   box-shadow: var(--box-shadow);
+  z-index: 1;
 }

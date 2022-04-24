@@ -1,16 +1,14 @@
 .sidebar__filter {
+  position: relative;
   display: flex;
   justify-content: space-between;
-  padding: 32px 0;
-  transition: color .3s ease;
   cursor: pointer;
-}
-
-
-.sidebar__filter:hover {
-  color: #F06000;
 }
 
 .sidebar__filter:last-of-type {
   border-bottom: none;
+}
+
+::marker {
+  content: ' ';
 }
