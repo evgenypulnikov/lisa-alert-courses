@@ -13,6 +13,10 @@
   border: 2px solid var(--color-hover);
 }
 
+.sidebar__hidden-checkbox:checked ~ .sidebar__checkbox-label {
+  color: var(--color-hover);
+}
+
 .sidebar__hidden-checkbox:checked ~ .sidebar__checkbox-label .sidebar__checkbox {
   display: inline-block;
   width: 20px;

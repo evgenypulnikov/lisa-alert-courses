@@ -1,7 +1,9 @@
 .sidebar__delete-all-filters {
-  border: none;
-  background-color: transparent;
   display: none;
+  padding: 0;
+  border: none;
+  font: var(--text-main);
+  background-color: transparent;
   cursor: pointer;
 }
 

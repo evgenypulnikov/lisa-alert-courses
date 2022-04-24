@@ -3,7 +3,6 @@ import {
   filterTemplate,
   chosenFilters,
   deleteAllFiltersButton,
-  filterBlocks
 } from '../vars.js'
 
 /* ___ 1. Check Checkboxes */
@@ -55,17 +54,6 @@ export function addFilter(element) {
     removeFilter(element);
   }
 }
-
-/* ___ 4. Open Filters */
-
-filterBlocks.forEach(function (element) {
-  element.addEventListener('click', function () {
-    element.classList.toggle("sidebar__filter_active");
-    const closestWrapper = element.closest('.sidebar__filter-wrapper');
-    const filterOption = closestWrapper.querySelector('.sidebar__filter-options');
-    filterOption.classList.toggle('sidebar__filter-options_opened');
-  })
-})
 
 /* ___ 5. Checkboxes For Each */
 
