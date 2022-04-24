@@ -1,7 +1,7 @@
 .sidebar__icon-arrow {
-  background: url("../../../images/arrow-down.svg") no-repeat center;
   width: 24px;
   height: 24px;
+  background: url("../../../images/arrow-down.svg") no-repeat center;
   transform: rotate(0);
   transition: transform 0.3s ease;
 }

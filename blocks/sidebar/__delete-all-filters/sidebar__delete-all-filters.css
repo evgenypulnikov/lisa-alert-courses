@@ -8,6 +8,6 @@
 }
 
 .sidebar__delete-all-filters:hover {
-  color: #F06000;
+  color: var(--color-hover);
   transition: color .3s ease;
 }
