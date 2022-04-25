@@ -1,9 +1,13 @@
 .sidebar__close-button {
+  background-image: url("../../../images/filter-close.svg");
   width: 20px;
   height: 20px;
-  padding: 0;
+  background-size: contain;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
   border: none;
+  padding: 0;
   vertical-align: sub;
-  background: url("../../../images/filter-close.svg") no-repeat center;
   cursor: pointer;
 }

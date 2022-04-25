@@ -1,8 +1,7 @@
 .sidebar__filter-title {
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-  padding: 32px 0px;
-  font: var(--text-main);
-  transition: color .3s ease;
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    
 }

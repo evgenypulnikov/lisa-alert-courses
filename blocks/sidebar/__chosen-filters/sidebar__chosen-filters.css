@@ -1,7 +1,4 @@
 .sidebar__chosen-filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  max-width: 312px;
+  width: 312px;
   margin-top: 32px;
 }

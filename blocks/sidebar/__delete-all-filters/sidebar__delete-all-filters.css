@@ -1,13 +1,11 @@
 .sidebar__delete-all-filters {
-  display: none;
-  padding: 0;
   border: none;
-  font: var(--text-main);
   background-color: transparent;
+  display: none;
   cursor: pointer;
 }
 
 .sidebar__delete-all-filters:hover {
-  color: var(--color-hover);
+  color: #F06000;
   transition: color .3s ease;
 }
