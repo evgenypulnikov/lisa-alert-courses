@@ -1,0 +1,9 @@
+.acc_input_phone::placeholder {
+  font-family: 'Golos', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #9397A3;
+}
+
