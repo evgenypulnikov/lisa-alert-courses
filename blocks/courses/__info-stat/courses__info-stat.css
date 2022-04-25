@@ -1,4 +1,5 @@
 .courses__info-stat {
   display: flex;
+  align-items: center;
   font: var(--text-main);
 }
