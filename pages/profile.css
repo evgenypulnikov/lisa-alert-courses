@@ -36,10 +36,30 @@
 
 /* Account Overview */
 
-@import url("../blocks/account-overview/account-overview.css");
-@import url("../blocks/account-overview/__avatar-container/account-overview__avatar-container.css");
-@import url("../blocks/account-overview/__photo/account-overview__photo.css");
-@import url("../blocks/account-overview/__title/account-overview__title.css");
-@import url("../blocks/account-overview/__status-list/account-overview__status-list.css");
-@import url("../blocks/account-overview/__status-item/account-overview__status-item.css");
-@import url("../blocks/account-overview/__description/account-overview__description.css");
+@import url("../blocks/edit-container/edit-container.css");
+@import url("../blocks/edit-container/__item/edit-container__item.css");
+@import url("../blocks/card/card.css");
+@import url("../blocks/card/__data-container/card__data-container.css");
+@import url("../blocks/card/_type/card_type_account-overview.css");
+@import url("../blocks/card/__avatar-container/card__avatar-container.css");
+@import url("../blocks/card/__photo/card__photo.css");
+@import url("../blocks/card/__title/card__title.css");
+@import url("../blocks/card/__status-list/card__status-list.css");
+@import url("../blocks/card/__status-item/card__status-item.css");
+@import url("../blocks/card/__description/card__description.css");
+
+/* User Data */
+@import url("../blocks/card/__tip/card__tip.css");
+@import url("../blocks/card/__paragraph/card__paragraph.css");
+@import url("../blocks/card/__paragraph-list/card__paragraph-list.css");
+@import url("../blocks/card/__paragraph-list-item/card__paragraph-list-item.css");
+@import url("../blocks/card/__input-container/card__input-container.css");
+@import url("../blocks/card/__btn-edit/card__btn-edit.css");
+@import url("../blocks/card/_type/card_type_user-data.css");
+@import url("../blocks/card/__subtitle/card__subtitle.css");
+
+/* Form */
+
+@import url("../blocks/form/form.css");
+@import url("../blocks/form/__label/form__label.css");
+@import url("../blocks/form/__input/form__input.css");
