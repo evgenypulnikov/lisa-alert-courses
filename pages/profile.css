@@ -40,7 +40,6 @@
 @import url("../blocks/edit-container/edit-container.css");
 @import url("../blocks/edit-container/__item/edit-container__item.css");
 @import url("../blocks/card/card.css");
-@import url("../blocks/card/__data-container/card__data-container.css");
 @import url("../blocks/card/_type/card_type_account-overview.css");
 @import url("../blocks/card/__avatar-container/card__avatar-container.css");
 @import url("../blocks/card/__photo/card__photo.css");
