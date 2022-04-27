@@ -3,7 +3,7 @@ export const user = {
   level: 'Профессионал',
   profession: 'Картограф',
   courses: 2,
-  birthday: '01.01.1990',
+  birthday: '1990-01-01',
   location: 'г. Санкт-Петербург',
   nickname: 'Белка',
   photo: 'images/profile/belka.svg',
