@@ -29,6 +29,5 @@ inputBirthday.value = user.birthday;
 inputLocation.value = user.location;
 inputNickname.value = user.nickname;
 
-inputPhone.value = user.phone;
 inputEmail.value = user.email;
 inputPassword.value = user.password;
