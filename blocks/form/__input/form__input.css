@@ -1,9 +1,11 @@
 .form__input {
   font: var(--text-main);
-  margin-bottom: 32px;
+  height: 50px;
+  margin-bottom: 31px;
+  padding: 10px 15px;
   border: 1.2px solid var(--color-tertiary);
+  box-sizing: border-box;
   border-radius: var(--radius);
-  padding: 12px 16px;
 }
 
 .form__input:focus {
