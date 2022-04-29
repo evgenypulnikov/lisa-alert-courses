@@ -2,7 +2,7 @@
   font: var(--text-main);
   height: 50px;
   margin-bottom: 31px;
-  padding: 10px 15px;
+  padding: 10px 55px 10px 15px;
   border: 1.2px solid var(--color-tertiary);
   box-sizing: border-box;
   border-radius: var(--radius);
