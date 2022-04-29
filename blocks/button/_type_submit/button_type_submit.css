@@ -1,7 +1,4 @@
 .button_type_submit {
   width: 250px;
   margin: auto;
-  background-color: var(--color-tertiary);
-  color: var(--dark-secondary);
-  border: none;
 }

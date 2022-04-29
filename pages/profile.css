@@ -50,7 +50,6 @@
 
 /* User Data */
 
-@import url("../blocks/card/__input-container/card__input-container.css");
 @import url("../blocks/card/__btn-edit/card__btn-edit.css");
 @import url("../blocks/card/_type/card_type_user-data.css");
 @import url("../blocks/card/__subtitle/card__subtitle.css");

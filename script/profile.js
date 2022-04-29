@@ -18,6 +18,7 @@ const inputPhone = formUserAccount.querySelector('input[name="phone"]');
 const inputEmail = formUserAccount.querySelector('input[name="email"]');
 const inputPassword = formUserAccount.querySelector('input[name="password"]');
 
+const labels = document.querySelectorAll('.form__label');
 const inputs = document.querySelectorAll('.form__input');
 const inputButtons = document.querySelectorAll('.card__btn-edit');
 
@@ -51,7 +52,12 @@ inputNickname.value = user.nickname;
 inputEmail.value = user.email;
 inputPassword.value = user.password;
 
+/* Inputs Behaviour */
+
 for (let i = 0; i < inputButtons.length; i++) {
+  labels[i].addEventListener('click', function(evt) {
+    evt.preventDefault();
+  })
   inputButtons[i].addEventListener('click', function() {
     inputs[i].focus();
   });
