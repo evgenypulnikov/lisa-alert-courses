@@ -49,6 +49,7 @@
 @import url("../blocks/card/__description/card__description.css");
 
 /* User Data */
+
 @import url("../blocks/card/__input-container/card__input-container.css");
 @import url("../blocks/card/__btn-edit/card__btn-edit.css");
 @import url("../blocks/card/_type/card_type_user-data.css");
@@ -60,6 +61,8 @@
 /* Form */
 
 @import url("../blocks/form/form.css");
+@import url("../blocks/form/__input-wrapper/form__input-wrapper.css");
 @import url("../blocks/form/__label/form__label.css");
 @import url("../blocks/form/__input/form__input.css");
+@import url("../blocks/form/__input/_readonly/form__input_readonly.css");
 

@@ -18,6 +18,9 @@ const inputPhone = formUserAccount.querySelector('input[name="phone"]');
 const inputEmail = formUserAccount.querySelector('input[name="email"]');
 const inputPassword = formUserAccount.querySelector('input[name="password"]');
 
+const inputs = document.querySelectorAll('.form__input');
+const inputButtons = document.querySelectorAll('.card__btn-edit');
+
 const user = {
   name: 'Иванова Анна Сидоровна',
   level: 'Профессионал',
@@ -32,6 +35,8 @@ const user = {
   password: 'qwerty123'
 }
 
+/* Init Data */
+
 userAvatar.src = user.photo;
 userName.textContent = user.name;
 userLevel.textContent = user.level;
@@ -45,3 +50,9 @@ inputNickname.value = user.nickname;
 
 inputEmail.value = user.email;
 inputPassword.value = user.password;
+
+for (let i = 0; i < inputButtons.length; i++) {
+  inputButtons[i].addEventListener('click', function() {
+    inputs[i].focus();
+  });
+}
