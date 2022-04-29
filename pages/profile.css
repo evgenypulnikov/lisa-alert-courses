@@ -49,14 +49,13 @@
 @import url("../blocks/card/__description/card__description.css");
 
 /* User Data */
-@import url("../blocks/card/__tip/card__tip.css");
-@import url("../blocks/card/__paragraph/card__paragraph.css");
-@import url("../blocks/card/__paragraph-list/card__paragraph-list.css");
-@import url("../blocks/card/__paragraph-list-item/card__paragraph-list-item.css");
 @import url("../blocks/card/__input-container/card__input-container.css");
 @import url("../blocks/card/__btn-edit/card__btn-edit.css");
 @import url("../blocks/card/_type/card_type_user-data.css");
 @import url("../blocks/card/__subtitle/card__subtitle.css");
+@import url("../blocks/tip/tip.css");
+@import url("../blocks/tip/__paragraph/tip__paragraph.css");
+@import url("../blocks/tip/__paragraph-list/tip__paragraph-list.css");
 
 /* Form */
 
