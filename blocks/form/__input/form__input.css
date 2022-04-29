@@ -11,3 +11,7 @@
 .form__input:focus {
   outline-color: var(--color-primary);
 }
+
+.form__input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
