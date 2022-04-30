@@ -70,4 +70,42 @@ for (let i = 0; i < inputButtons.length; i++) {
   });
 }
 
+/* Save Changes Data in Forms */
 
+function setBtnActive(button) {
+  button.removeAttribute('disabled','');
+  button.classList.remove('button_type_disabled');
+  button.classList.add('button_type_apply');
+}
+
+function setBtnInactive(button) {
+  button.setAttribute('disabled','');
+  button.classList.add('button_type_disabled');
+  button.classList.remove('button_type_apply');
+}
+
+inputs.forEach(input => {
+  input.addEventListener('input', (evt) => {
+    const submitBtn = input.closest('form').querySelector('.button_type_submit');
+    if (input.value !== user[evt.target.id]) {
+      setBtnActive(submitBtn);
+      input.classList.add('changed');
+    } else { // Если значение в поле равно значению в массиве, то изменения вносить не нужно
+      setBtnInactive(submitBtn);
+      input.classList.remove('changed');
+    }
+  });
+});
+
+document.querySelectorAll('.form').forEach(form => {
+  form.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+    const changedInputs = form.querySelectorAll('.changed'); //Будем перезаписывать в массив только те поля, которые были изменены
+    changedInputs.forEach(input => {
+      user[input.id] = input.value;
+      input.classList.remove('changed');
+    });
+    const submitBtn = form.querySelector('.button_type_submit');
+    setBtnInactive(submitBtn);
+  });
+});
