@@ -229,16 +229,33 @@ function addFilter(element) {
   }
 }
 
-/* ___ 4. Checkboxes For Each */
+
+/* ___ 4. Active or Not */
+
+function checkActiveOrInactive(element) {
+  const inactive = document.querySelector('#inactive');
+  const active = document.querySelector('#active');
+  if (element.id === 'active') {
+    inactive.checked = false;
+    removeFilter(inactive);
+  }
+  if (element.id === 'inactive') {
+    active.checked = false;
+    removeFilter(active);
+  }
+}
+
+/* ___ 5. Checkboxes For Each */
 
 checkboxes.forEach(function (element) {
   element.addEventListener('click', function () {
+    checkActiveOrInactive(element);
     addFilter(element);
     checkCheckboxes();
   })
 })
 
-/* ___ 5. Remove All Filters */
+/* ___ 6. Remove All Filters */
 
 deleteAllFiltersButton.addEventListener('click', function () {
   const allActiveFilters = document.querySelectorAll('.sidebar__filter-value');
