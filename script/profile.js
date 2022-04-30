@@ -51,7 +51,13 @@ inputLocation.value = user.location;
 inputNickname.value = user.nickname;
 
 inputEmail.value = user.email;
-inputPassword.value = user.password;
+inputPassword.value = replaceSymbols(user.password);
+
+/* Replace inputs symbols '*' */
+
+function replaceSymbols(str) {
+  return str.replace(/./gi,'*');
+}
 
 /* Inputs Behaviour */
 
