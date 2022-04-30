@@ -21,6 +21,7 @@ const inputPassword = formUserAccount.querySelector('input[name="password"]');
 const labels = document.querySelectorAll('.form__label');
 const inputs = document.querySelectorAll('.form__input');
 const inputButtons = document.querySelectorAll('.card__btn-edit');
+const formSubmitButtons = document.querySelectorAll('.button_type_submit');
 
 const user = {
   name: 'Иванова Анна Сидоровна',
@@ -57,8 +58,10 @@ inputPassword.value = user.password;
 for (let i = 0; i < inputButtons.length; i++) {
   labels[i].addEventListener('click', function(evt) {
     evt.preventDefault();
-  })
+  });
   inputButtons[i].addEventListener('click', function() {
     inputs[i].focus();
   });
 }
+
+
