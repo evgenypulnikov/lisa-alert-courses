@@ -59,6 +59,14 @@ function replaceSymbols(str) {
   return str.replace(/./gi,'*');
 }
 
+inputPassword.addEventListener('input', function() {
+  [].forEach.call(document.querySelectorAll('input[name="password"]'), function(input){
+    input.oninput = function(){
+      input.value = input.value.replace(/./gi, "*");
+    };
+  });
+});
+
 /* Inputs Behaviour */
 
 for (let i = 0; i < inputButtons.length; i++) {
