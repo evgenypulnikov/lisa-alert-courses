@@ -126,7 +126,7 @@ function createCourseItem(image, title, level, levelClass, desc, status, statusC
   courseImage.src = image;
   courseTitle.textContent = title;
   courseLevel.textContent = level;
-  courseCard.classList.value = 'courses__item';
+  courseCard.classList.value = 'courses__item courses__item_is_visible';
   courseCard.classList.add(levelClass);
   courseDescription.textContent = maxTextLength(desc, 120);
   courseLessonsAmount.lastChild.textContent = lessons;
@@ -285,19 +285,19 @@ const coursesCards = coursesContainer.querySelectorAll('.courses__item');
 
 function showCourses(option, cards) {
   cards.forEach(function(card) {
-    const isFiltered = !card.classList.contains(option);
+    const isFiltered = card.classList.contains(option);
     const isShowAll = option.toLowerCase() === 'all';
     if (isFiltered) {
-      card.classList.add('courses__item_is_hidden');
+      card.classList.add('courses__item_is_visible');
     }
   });
 }
 
 function hideCourses(option, cards) {
   cards.forEach(function(card) {
-    const isFiltered = !card.classList.contains(option);
+    const isFiltered = card.classList.contains(option);
     if (isFiltered) {
-      card.classList.remove('courses__item_is_hidden');
+      card.classList.remove('courses__item_is_visible');
     }
   });
 }
