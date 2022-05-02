@@ -15,3 +15,7 @@
 .form__input::-webkit-calendar-picker-indicator {
   opacity: 0;
 }
+
+.form__input:active {
+  outline-color: var(--color-primary);
+}
