@@ -126,7 +126,7 @@ function createCourseItem(image, title, level, levelClass, desc, status, statusC
   courseImage.src = image;
   courseTitle.textContent = title;
   courseLevel.textContent = level;
-  courseCard.classList.value = 'courses__item courses__item_is_visible';
+  courseCard.classList.value = 'courses__item courses__item_visible_all';
   courseCard.classList.add(levelClass);
   courseDescription.textContent = maxTextLength(desc, 120);
   courseLessonsAmount.lastChild.textContent = lessons;
@@ -197,8 +197,11 @@ function checkCheckboxes() {
   let i = 0;
   checkboxes.forEach(function (element) {
     if (element.checked) {
+      element.setAttribute('checked', '');
       deleteAllFiltersButton.classList.add('sidebar__delete-all-filters_opened');
       i++;
+    } else if (element.checked === false) {
+      element.removeAttribute('checked');
     }
   })
   if (i === 0) {
@@ -282,14 +285,16 @@ deleteAllFiltersButton.addEventListener('click', function () {
 /* ___ 7. Courses Filtering */
 
 const coursesCards = coursesContainer.querySelectorAll('.courses__item');
+const checkedCheckboxes = document.querySelectorAll('.checkboxes:checked');
 
 function showCourses(option, cards) {
   cards.forEach(function(card) {
     const isFiltered = card.classList.contains(option);
     if (isFiltered) {
       card.classList.add('courses__item_is_visible');
-    } else {
-      card.classList.remove('courses__item_is_visible');
+    }
+    if (card.classList.contains('courses__item_visible_all')) {
+      card.classList.remove('courses__item_visible_all');
     }
   });
 }

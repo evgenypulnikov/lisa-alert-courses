@@ -74,6 +74,10 @@
   display: flex;
 }
 
+.courses__item_visible_all {
+  display: flex;
+}
+
 .courses__item_is_hidden {
   display: none;
 }
