@@ -137,17 +137,6 @@ function createCourseItem(image, title, level, levelClass, desc, status, statusC
 
   const courseItem = courseTemplate.cloneNode(true);
 
-  const courseCardButton = courseCard.querySelector('.button');
-
-  courseCardButton.addEventListener('click', function(evt) {
-    const target = evt.target;
-    if (target.classList.contains('button_type_action')) {
-      target.classList.remove('button_type_action');
-      target.classList.add('button_type_apply');
-      target.textContent = 'Продолжить';
-    }
-  });
-
   return courseItem;
 }
 
@@ -239,8 +228,6 @@ function addFilter(element) {
       element.checked = false;
       checkCheckboxes();
     })
-  } else {
-    removeFilter(element);
   }
 }
 
@@ -264,8 +251,14 @@ function checkActiveOrInactive(element) {
 checkboxes.forEach(function (element) {
   element.addEventListener('click', function () {
     checkActiveOrInactive(element);
-    addFilter(element);
     checkCheckboxes();
+  })
+  element.addEventListener('change', function () {
+    if (element.checked) {
+      addFilter(element);
+    } else {
+      removeFilter(element);
+    }
   })
 })
 
@@ -315,6 +308,21 @@ checkboxes.forEach(function(checkbox) {
       showCourses(currentOption, coursesCards);
     } else {
       hideCourses(currentOption, coursesCards);
+    }
+  });
+});
+
+/* ___ 8. Courses Cards Buttons */
+
+const courseCardButton = coursesContainer.querySelectorAll('.button');
+
+courseCardButton.forEach(function (button) {
+  button.addEventListener('click', function(evt) {
+    const target = evt.target;
+    if (target.classList.contains('button_type_action')) {
+      target.classList.remove('button_type_action');
+      target.classList.add('button_type_apply');
+      target.textContent = 'Продолжить';
     }
   });
 });
