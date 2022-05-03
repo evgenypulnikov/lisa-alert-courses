@@ -286,9 +286,10 @@ const coursesCards = coursesContainer.querySelectorAll('.courses__item');
 function showCourses(option, cards) {
   cards.forEach(function(card) {
     const isFiltered = card.classList.contains(option);
-    const isShowAll = option.toLowerCase() === 'all';
     if (isFiltered) {
       card.classList.add('courses__item_is_visible');
+    } else {
+      card.classList.remove('courses__item_is_visible');
     }
   });
 }
@@ -312,4 +313,3 @@ checkboxes.forEach(function(checkbox) {
     }
   });
 });
-
