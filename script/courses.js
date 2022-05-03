@@ -21,7 +21,8 @@ const coursesList = [
     lessonsAmount: '100 занятий',
     hoursAmount: '100 ч',
     courseStatus: 'Продолжить',
-    statusClass: 'button_type_apply',
+    statusClass: 'continue',
+    statusButtonClass: 'button_type_apply',
   },
   {
     courseImage: 'images/courses-list/duty-officers.jpg',
@@ -32,7 +33,8 @@ const coursesList = [
     lessonsAmount: '144 занятия',
     hoursAmount: '144 ч',
     courseStatus: 'Записаться',
-    statusClass: 'button_type_action'
+    statusClass: 'sign-up',
+    statusButtonClass: 'button_type_action'
   },
   {
     courseImage: 'images/courses-list/drones.jpg',
@@ -43,7 +45,8 @@ const coursesList = [
     lessonsAmount: '144 занятия',
     hoursAmount: '144 ч',
     courseStatus: 'Записаться',
-    statusClass: 'button_type_action'
+    statusClass: 'sign-up',
+    statusButtonClass: 'button_type_action'
   },
   {
     courseImage: 'images/courses-list/first-aid.jpg',
@@ -54,7 +57,8 @@ const coursesList = [
     lessonsAmount: '144 занятия',
     hoursAmount: '144 ч',
     courseStatus: 'Записаться',
-    statusClass: 'button_type_action'
+    statusClass: 'sign-up',
+    statusButtonClass: 'button_type_action'
   },
   {
     courseImage: 'images/courses-list/infogroup.jpg',
@@ -65,7 +69,8 @@ const coursesList = [
     lessonsAmount: '144 занятия',
     hoursAmount: '144 ч',
     courseStatus: 'Пройден',
-    statusClass: 'button_type_disabled'
+    statusClass: 'done',
+    statusButtonClass: 'button_type_disabled'
   },
   {
     courseImage: 'images/courses-list/calling-operator.jpg',
@@ -76,7 +81,8 @@ const coursesList = [
     lessonsAmount: '144 занятия',
     hoursAmount: '144 ч',
     courseStatus: 'Записаться',
-    statusClass: 'button_type_action'
+    statusClass: 'sign-up',
+    statusButtonClass: 'button_type_action'
   },
   {
     courseImage: 'images/courses-list/short-calls.jpg',
@@ -87,7 +93,8 @@ const coursesList = [
     lessonsAmount: '100 занятий',
     hoursAmount: '100 ч',
     courseStatus: 'Записаться',
-    statusClass: 'button_type_action'
+    statusClass: 'sign-up',
+    statusButtonClass: 'button_type_action'
   },
   {
     courseImage: 'images/courses-list/newbies.jpg',
@@ -98,7 +105,8 @@ const coursesList = [
     lessonsAmount: '144 занятия',
     hoursAmount: '144 ч',
     courseStatus: 'Пройден',
-    statusClass: 'button_type_disabled'
+    statusClass: 'done',
+    statusButtonClass: 'button_type_disabled'
   }
 ]
 
@@ -122,7 +130,7 @@ function maxTextLength(textElement, maxLength) {
 
 /* ___ 1. Create Course Item */
 
-function createCourseItem(image, title, level, levelClass, desc, status, statusClass, lessons, hours) {
+function createCourseItem(image, title, level, levelClass, desc, status, statusButtonClass, lessons, hours) {
   courseImage.src = image;
   courseTitle.textContent = title;
   courseLevel.textContent = level;
@@ -133,7 +141,7 @@ function createCourseItem(image, title, level, levelClass, desc, status, statusC
   courseHoursAmount.lastChild.textContent = hours;
   courseButton.textContent = status;
   courseButton.classList.value = 'button';
-  courseButton.classList.add(statusClass);
+  courseButton.classList.add(statusButtonClass);
 
   const courseItem = courseTemplate.cloneNode(true);
 
@@ -154,7 +162,7 @@ coursesList.forEach(function(coursesList) {
     coursesList.levelClass,
     coursesList.courseDescription,
     coursesList.courseStatus,
-    coursesList.statusClass,
+    coursesList.statusButtonClass,
     coursesList.lessonsAmount,
     coursesList.hoursAmount
     );
@@ -278,7 +286,6 @@ deleteAllFiltersButton.addEventListener('click', function () {
 /* ___ 7. Courses Filtering */
 
 const coursesCards = coursesContainer.querySelectorAll('.courses__item');
-const checkedCheckboxes = document.querySelectorAll('.checkboxes:checked');
 
 function showCourses(option, cards) {
   cards.forEach(function(card) {
