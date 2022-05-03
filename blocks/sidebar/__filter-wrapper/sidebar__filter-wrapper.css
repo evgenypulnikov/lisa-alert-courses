@@ -1,3 +1,7 @@
 .sidebar__filter-wrapper {
   border-bottom: 1px solid var(--color-tertiary);
 }
+
+.sidebar__filter-wrapper:last-of-type {
+  border-bottom: none;
+}
