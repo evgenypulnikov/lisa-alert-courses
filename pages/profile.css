@@ -64,4 +64,5 @@
 @import url("../blocks/form/__label/form__label.css");
 @import url("../blocks/form/__input/form__input.css");
 @import url("../blocks/form/__input/_readonly/form__input_readonly.css");
+@import url("../blocks/form/__file-upload/form__file-upload.css");
 
