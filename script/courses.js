@@ -9,6 +9,7 @@ const courseDescription = courseTemplate.querySelector('.courses__course-descrip
 const courseLessonsAmount = courseTemplate.querySelector('.courses__info-stat_lessons-amount');
 const courseHoursAmount = courseTemplate.querySelector('.courses__info-stat_hours-amount');
 const courseButton = courseTemplate.querySelector('.button');
+let checkedBox = [];
 
 const coursesList = [
   {
@@ -16,80 +17,72 @@ const coursesList = [
     courseTitle: 'Кинологическое направление',
     courseLevel: 'Бывалый',
     courseDescription: 'Поисково-спасательная работа, следовая работа, а так же поиск тел погибших с помощью собак',
-    lessonsAmount: '100 занятий',
-    hoursAmount: '100 ч',
-    courseStatus: 'Продолжить',
-    statusClass: 'button_type_apply',
+    lessonsAmount: 100,
+    hoursAmount: 100,
+    courseStatus: 'registered'
   },
   {
     courseImage: 'images/courses-list/duty-officers.jpg',
     courseTitle: 'Оперативные дежурные',
     courseLevel: 'Профессионал',
     courseDescription: 'Оперативное реагирование, контроль поступающих заявок и звонков, распределение задач, помощь в решении вопросов, удалённое',
-    lessonsAmount: '144 занятия',
-    hoursAmount: '144 ч',
-    courseStatus: 'Записаться',
-    statusClass: 'button_type_action'
+    lessonsAmount: 144,
+    hoursAmount: 144,
+    courseStatus: 'active'
   },
   {
     courseImage: 'images/courses-list/drones.jpg',
     courseTitle: 'Беспилотные летательные аппараты',
     courseLevel: 'Бывалый',
     courseDescription: 'Применение БПЛА в поиске людей, а так же передача полученной с помощью техники информации спасательным службам',
-    lessonsAmount: '144 занятия',
-    hoursAmount: '144 ч',
-    courseStatus: 'Записаться',
-    statusClass: 'button_type_action'
+    lessonsAmount: 144,
+    hoursAmount: 144,
+    courseStatus: 'active'
   },
   {
     courseImage: 'images/courses-list/first-aid.jpg',
     courseTitle: 'Первая помощь',
     courseLevel: 'Бывалый',
     courseDescription: 'Основы оказания первой помощи на поиске, юридические аспекты, базовые алгоритмы, разбор ошибок при оказания помощи на поиске',
-    lessonsAmount: '144 занятия',
-    hoursAmount: '144 ч',
-    courseStatus: 'Записаться',
-    statusClass: 'button_type_action'
+    lessonsAmount: 144,
+    hoursAmount: 144,
+    courseStatus: 'active'
   },
   {
     courseImage: 'images/courses-list/infogroup.jpg',
     courseTitle: 'Инфогруппа',
     courseLevel: 'Новичок',
     courseDescription: 'Создание ориентировок, заказ карт, связь через мини АТС, обеспечение поиска',
-    lessonsAmount: '144 занятия',
-    hoursAmount: '144 ч',
-    courseStatus: 'Пройден',
-    statusClass: 'button_type_disabled'
+    lessonsAmount: 144,
+    hoursAmount: 144,
+    courseStatus: 'passed'
   },
   {
     courseImage: 'images/courses-list/calling-operator.jpg',
     courseTitle: 'Операторы 8-800',
     courseLevel: 'Новичок',
     courseDescription: 'Приём заявок на поиск людей с последующей передачей информации инфоргам',
-    lessonsAmount: '144 занятия',
-    hoursAmount: '144 ч',
-    courseStatus: 'Записаться',
-    statusClass: 'button_type_action'
+    lessonsAmount: 144,
+    hoursAmount: 144,
+    courseStatus: 'active'
   },
   {
     courseImage: 'images/courses-list/short-calls.jpg',
     courseTitle: 'Группа коротких прозвонов',
     courseLevel: 'Новичок',
     courseDescription: 'Прозвон больниц, ОВД, различных ведомств, иногда свидетелей и возможных свидетелей',
-    lessonsAmount: '100 занятий',
-    hoursAmount: '100 ч',
-    courseStatus: 'Записаться',
-    statusClass: 'button_type_action'
+    lessonsAmount: 100,
+    hoursAmount: 100,
+    courseStatus: 'active'
   },
   {
     courseImage: 'images/courses-list/newbies.jpg',
     courseTitle: 'Новичковая',
     courseLevel: 'Новичок',
     courseDescription: 'Короткое описание курса. людей в лесу и в городе. Все поисковые мероприятия организуются силами добровольцев «ЛизаАлерт»…',
-    lessonsAmount: '144 занятия',
-    hoursAmount: '144 ч',
-    courseStatus: 'Пройден',
-    statusClass: 'button_type_disabled'
+    lessonsAmount: 144,
+    hoursAmount: 144,
+    courseStatus: 'passed'
   }
 ]
 
@@ -113,29 +106,42 @@ function maxTextLength(textElement, maxLength) {
 
 /* ___ 1. Create Course Item */
 
-function createCourseItem(image, title, level, desc, status, statusClass, lessons, hours) {
-  courseImage.src = image;
-  courseTitle.textContent = title;
-  courseLevel.textContent = level;
-  courseDescription.textContent = maxTextLength(desc, 120);
-  courseLessonsAmount.lastChild.textContent = lessons;
-  courseHoursAmount.lastChild.textContent = hours;
-  courseButton.textContent = status;
-  courseButton.classList.value = 'button';
-  courseButton.classList.add(statusClass);
-
+function createCourseItem(image, title, level, desc, lessons, hours, status) {
   const courseItem = courseTemplate.cloneNode(true);
+  courseItem.querySelector('.courses__course-image').src = image;
+  courseItem.querySelector('.courses__course-title').textContent = title;
+  courseItem.querySelector('.courses__course-level').textContent = level;
+  courseItem.querySelector('.courses__course-description').textContent = maxTextLength(desc, 120);
+  courseItem.querySelector('.courses__info-stat_lessons-amount').textContent = `${lessons} занятий`;
+  courseItem.querySelector('.courses__info-stat_hours-amount').textContent = `${hours} ч`;
+  const courseButton = courseItem.querySelector('.button');
 
-  const courseCardButton = courseItem.querySelector('.button');
-
-  courseCardButton.addEventListener('click', function(evt) {
-    const target = evt.target;
-    if (target.classList.contains('button_type_action')) {
-      target.classList.remove('button_type_action');
-      target.classList.add('button_type_apply');
-      target.textContent = 'Продолжить';
+  switch (status) {
+    case 'active': {
+      courseButton.classList.add('button_type_action');
+      courseButton.id = status;
+      courseButton.textContent = 'Записаться';
+      courseButton.addEventListener('click', () => {
+        courseButton.classList.remove('button_type_action');
+        courseButton.classList.add('button_type_apply');
+        courseButton.textContent = 'Продолжить';
+      })
+      break;
     }
-  });
+    case 'passed':
+    case 'inactive': {
+      courseButton.classList.add('button_type_disabled');
+      courseButton.id = status;
+      courseButton.textContent = 'Пройден';
+      break;
+    }
+    case 'registered': {
+      courseButton.classList.add('button_type_apply');
+      courseButton.id = status;
+      courseButton.textContent = 'Продолжить';
+      break;
+    }
+  }
 
   return courseItem;
 }
@@ -152,30 +158,13 @@ coursesList.forEach(function(coursesList) {
     coursesList.courseTitle,
     coursesList.courseLevel,
     coursesList.courseDescription,
-    coursesList.courseStatus,
-    coursesList.statusClass,
     coursesList.lessonsAmount,
-    coursesList.hoursAmount
+    coursesList.hoursAmount,
+    coursesList.courseStatus,
     );
 
   renderCourseItem(item, coursesContainer);
 });
-
-/* ___ 3. Courses Array Filter */
-
-function coursesArrayFilter() {
-  const allCoursesButtons = coursesContainer.querySelectorAll('.button');
-
-  for (let i = 0; i < coursesList.length; i++) {
-    if (allCoursesButtons[i].classList.contains('button_type_action')) {
-      allCoursesButtons[i].addEventListener('click', function() {
-        coursesList[i].courseStatus = 'Продолжить';
-      });
-    }
-  }
-}
-
-coursesArrayFilter();
 
 /* ___ Filters Functions */
 
@@ -223,6 +212,7 @@ function addFilter(element) {
       filterName.remove();
       element.checked = false;
       checkCheckboxes();
+      filterCourses(checkFilters(element));
     })
   } else {
     removeFilter(element);
@@ -252,6 +242,10 @@ checkboxes.forEach(function (element) {
     checkActiveOrInactive(element);
     addFilter(element);
     checkCheckboxes();
+
+
+    filterCourses(checkFilters(element));
+  
   })
 })
 
@@ -266,4 +260,68 @@ deleteAllFiltersButton.addEventListener('click', function () {
   checkboxes.forEach(function (element) {
     element.checked = false;
   })
+  checkedBox = [];
+  filterCourses(checkedBox);
 })
+
+
+/* ___ 7. Cards Filters */
+
+function checkFilters(element) {
+  if ((element.checked === true) && (checkedBox.indexOf(element.id) === -1)) {
+    checkedBox.push(element.id)
+  } 
+  if (element.checked === false) {
+    let b = checkedBox.indexOf(element.id);
+    checkedBox.splice(b,1);
+  }
+  if ((element.id === 'active') && (checkedBox.indexOf('inactive') !== -1)) {
+    b = checkedBox.indexOf('inactive');
+    checkedBox.splice(b,1);
+  }
+
+  if ((element.id === 'inactive') && (checkedBox.indexOf('active') !== -1)) {
+    b = checkedBox.indexOf('active');
+    checkedBox.splice(b,1);
+  }
+  return checkedBox;
+}
+
+function filterCourses(arr) {
+  const courses = document.querySelectorAll('.courses__item');
+
+  courses.forEach(course => {
+    course.style.display = 'none';
+  })
+
+  if (arr.length === 0) {
+    courses.forEach(course => {
+      course.style.display = 'flex';
+    })
+  }
+  courses.forEach(course => {
+    let courseLevel = course.querySelector('.courses__course-level').textContent;
+    const courseStatus = course.querySelector('.button').id;
+
+    switch (courseLevel) {
+      case 'Новичок': {
+        courseLevel = 'newbie';
+        break;
+      }
+      case 'Бывалый': {
+        courseLevel = 'middle'
+        break;
+      }
+      case 'Профессионал': {
+        courseLevel = 'profi';
+        break;
+      }
+    }
+
+    arr.forEach(item => {
+      if (courseLevel === item  || courseStatus === item) {
+        course.style.display = 'flex';
+      }
+    })
+  })
+}
