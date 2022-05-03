@@ -34,7 +34,8 @@ const coursesList = [
     hoursAmount: '144 ч',
     courseStatus: 'Записаться',
     statusClass: 'sign-up',
-    statusButtonClass: 'button_type_action'
+    statusButtonClass: 'button_type_action',
+    buttonClass: 'active',
   },
   {
     courseImage: 'images/courses-list/drones.jpg',
@@ -143,9 +144,7 @@ function createCourseItem(image, title, level, levelClass, desc, status, statusB
   courseButton.classList.value = 'button';
   courseButton.classList.add(statusButtonClass);
 
-  const courseItem = courseTemplate.cloneNode(true);
-
-  return courseItem;
+  return courseTemplate.cloneNode(true);
 }
 
 /* ___ 2. Render Course Item */
@@ -188,7 +187,16 @@ coursesArrayFilter();
 
 /* ___ Filters Functions */
 
-/* ___ 1. Check Checkboxes */
+/* ___ 1. Default Statement */
+
+function defaultCourses () {
+  coursesCards.forEach(function (card) {
+    card.classList.add('courses__item_visible_all');
+    card.classList.remove('courses__item_is_visible');
+  })
+}
+
+/* ___ 2. Check Checkboxes */
 
 function checkCheckboxes() {
   let i = 0;
@@ -203,10 +211,11 @@ function checkCheckboxes() {
   })
   if (i === 0) {
     deleteAllFiltersButton.classList.remove('sidebar__delete-all-filters_opened');
+    defaultCourses();
   }
 }
 
-/* ___ 2. Remove Filter */
+/* ___ 3. Remove Filter */
 
 function removeFilter(element) {
   const option = element.closest('.sidebar__option');
@@ -219,7 +228,8 @@ function removeFilter(element) {
   })
 }
 
-/* ___ 3. Add Filter */
+/* ___ 4. Add Filter */
+const coursesCards = coursesContainer.querySelectorAll('.courses__item');
 
 function addFilter(element) {
   const option = element.closest('.sidebar__option');
@@ -235,11 +245,12 @@ function addFilter(element) {
       filterName.remove();
       element.checked = false;
       checkCheckboxes();
+      hideCourses(element.name, coursesCards);
     })
   }
 }
 
-/* ___ 4. Active or Not */
+/* ___ 5. Active or Not */
 
 function checkActiveOrInactive(element) {
   const inactive = document.querySelector('#inactive');
@@ -254,7 +265,7 @@ function checkActiveOrInactive(element) {
   }
 }
 
-/* ___ 5. Checkboxes For Each */
+/* ___ 6. Checkboxes For Each */
 
 checkboxes.forEach(function (element) {
   element.addEventListener('click', function () {
@@ -270,7 +281,7 @@ checkboxes.forEach(function (element) {
   })
 })
 
-/* ___ 6. Remove All Filters */
+/* ___ 7. Remove All Filters */
 
 deleteAllFiltersButton.addEventListener('click', function () {
   const allActiveFilters = document.querySelectorAll('.sidebar__filter-value');
@@ -281,11 +292,10 @@ deleteAllFiltersButton.addEventListener('click', function () {
   checkboxes.forEach(function (element) {
     element.checked = false;
   })
-})
+  defaultCourses();
+});
 
-/* ___ 7. Courses Filtering */
-
-const coursesCards = coursesContainer.querySelectorAll('.courses__item');
+/* ___ 8. Courses Filtering */
 
 function showCourses(option, cards) {
   cards.forEach(function(card) {
@@ -319,7 +329,7 @@ checkboxes.forEach(function(checkbox) {
   });
 });
 
-/* ___ 8. Courses Cards Buttons */
+// /* ___ 8. Courses Cards Buttons */
 
 const courseCardButton = coursesContainer.querySelectorAll('.button');
 
@@ -333,3 +343,4 @@ courseCardButton.forEach(function (button) {
     }
   });
 });
+
