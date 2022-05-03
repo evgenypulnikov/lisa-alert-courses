@@ -69,3 +69,15 @@
 @import url("../blocks/sidebar/__filter-value/sidebar__filter-value.css");
 @import url("../blocks/sidebar/__close-button/sidebar__close-button.css");
 @import url("../blocks/sidebar/__delete-all-filters/_opened/sidebar__delete-all-filters_opened.css");
+
+.courses__item_is_visible {
+  display: flex;
+}
+
+.courses__item_visible_all {
+  display: flex;
+}
+
+.courses__item_is_hidden {
+  display: none;
+}
