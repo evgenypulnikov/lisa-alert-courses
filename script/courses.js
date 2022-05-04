@@ -9,16 +9,11 @@ const courseDescription = courseTemplate.querySelector('.courses__course-descrip
 const courseLessonsAmount = courseTemplate.querySelector('.courses__info-stat_lessons-amount');
 const courseHoursAmount = courseTemplate.querySelector('.courses__info-stat_hours-amount');
 const courseButton = courseTemplate.querySelector('.button');
-let checkedBox = [];
 
-///////////////////////////////////////////
 let filters = {
   level: [],
   status: []
 }
-console.log(filters);
-////////////////////////////////////////////
-
 
 const coursesList = [
   {
@@ -251,10 +246,7 @@ checkboxes.forEach(function (element) {
     checkActiveOrInactive(element);
     addFilter(element);
     checkCheckboxes();
-
-
     filterCourses(checkFilters(element));
-  
   })
 })
 
@@ -280,12 +272,10 @@ deleteAllFiltersButton.addEventListener('click', function () {
 function checkFilters(element) {
   if ((element.checked === true) && (filters.level.indexOf(element.id) === -1) && (element.getAttribute('data-atr') === 'level')) {
     filters.level.push(element.id);
-    console.log(filters);
   } 
   
   if ((element.checked === true) && (filters.status.indexOf(element.id) === -1) && (element.getAttribute('data-atr') === 'status')) {
     filters.status.push(element.id);
-    console.log(filters);
   } 
 
   if (element.checked === false) {
@@ -293,13 +283,11 @@ function checkFilters(element) {
       case 'level': {
         let b = filters.level.indexOf(element.id);
         filters.level.splice(b,1);
-        console.log(filters);
         break;
       }
       case 'status': {
         let b = filters.status.indexOf(element.id);
         filters.status.splice(b,1);
-        console.log(filters);
         break;
       }
     }
