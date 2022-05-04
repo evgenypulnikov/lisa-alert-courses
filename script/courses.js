@@ -2,6 +2,7 @@
 
 const coursesContainer = document.querySelector('.courses');
 const courseTemplate = document.querySelector('#course-template').content;
+const courseCard = courseTemplate.querySelector('.courses__item');
 const courseImage = courseTemplate.querySelector('.courses__course-image');
 const courseTitle = courseTemplate.querySelector('.courses__course-title');
 const courseLevel = courseTemplate.querySelector('.courses__course-level');
@@ -20,6 +21,7 @@ const coursesList = [
     courseImage: 'images/courses-list/cynology.jpg',
     courseTitle: 'Кинологическое направление',
     courseLevel: 'Бывалый',
+    levelClass: 'middle',
     courseDescription: 'Поисково-спасательная работа, следовая работа, а так же поиск тел погибших с помощью собак',
     lessonsAmount: 100,
     hoursAmount: 100,
@@ -29,6 +31,7 @@ const coursesList = [
     courseImage: 'images/courses-list/duty-officers.jpg',
     courseTitle: 'Оперативные дежурные',
     courseLevel: 'Профессионал',
+    levelClass: 'profi',
     courseDescription: 'Оперативное реагирование, контроль поступающих заявок и звонков, распределение задач, помощь в решении вопросов, удалённое',
     lessonsAmount: 144,
     hoursAmount: 144,
@@ -38,6 +41,7 @@ const coursesList = [
     courseImage: 'images/courses-list/drones.jpg',
     courseTitle: 'Беспилотные летательные аппараты',
     courseLevel: 'Бывалый',
+    levelClass: 'middle',
     courseDescription: 'Применение БПЛА в поиске людей, а так же передача полученной с помощью техники информации спасательным службам',
     lessonsAmount: 144,
     hoursAmount: 144,
@@ -47,6 +51,7 @@ const coursesList = [
     courseImage: 'images/courses-list/first-aid.jpg',
     courseTitle: 'Первая помощь',
     courseLevel: 'Бывалый',
+    levelClass: 'middle',
     courseDescription: 'Основы оказания первой помощи на поиске, юридические аспекты, базовые алгоритмы, разбор ошибок при оказания помощи на поиске',
     lessonsAmount: 144,
     hoursAmount: 144,
@@ -56,6 +61,7 @@ const coursesList = [
     courseImage: 'images/courses-list/infogroup.jpg',
     courseTitle: 'Инфогруппа',
     courseLevel: 'Новичок',
+    levelClass: 'newbie',
     courseDescription: 'Создание ориентировок, заказ карт, связь через мини АТС, обеспечение поиска',
     lessonsAmount: 144,
     hoursAmount: 144,
@@ -65,6 +71,7 @@ const coursesList = [
     courseImage: 'images/courses-list/calling-operator.jpg',
     courseTitle: 'Операторы 8-800',
     courseLevel: 'Новичок',
+    levelClass: 'newbie',
     courseDescription: 'Приём заявок на поиск людей с последующей передачей информации инфоргам',
     lessonsAmount: 144,
     hoursAmount: 144,
@@ -74,6 +81,7 @@ const coursesList = [
     courseImage: 'images/courses-list/short-calls.jpg',
     courseTitle: 'Группа коротких прозвонов',
     courseLevel: 'Новичок',
+    levelClass: 'newbie',
     courseDescription: 'Прозвон больниц, ОВД, различных ведомств, иногда свидетелей и возможных свидетелей',
     lessonsAmount: 100,
     hoursAmount: 100,
@@ -83,6 +91,7 @@ const coursesList = [
     courseImage: 'images/courses-list/newbies.jpg',
     courseTitle: 'Новичковая',
     courseLevel: 'Новичок',
+    levelClass: 'newbie',
     courseDescription: 'Короткое описание курса. людей в лесу и в городе. Все поисковые мероприятия организуются силами добровольцев «ЛизаАлерт»…',
     lessonsAmount: 144,
     hoursAmount: 144,
@@ -161,6 +170,7 @@ coursesList.forEach(function(coursesList) {
     coursesList.courseImage,
     coursesList.courseTitle,
     coursesList.courseLevel,
+    coursesList.levelClass,
     coursesList.courseDescription,
     coursesList.lessonsAmount,
     coursesList.hoursAmount,
@@ -172,22 +182,35 @@ coursesList.forEach(function(coursesList) {
 
 /* ___ Filters Functions */
 
-/* ___ 1. Check Checkboxes */
+/* ___ 1. Default Statement */
+
+function defaultCourses () {
+  coursesCards.forEach(function (card) {
+    card.classList.add('courses__item_visible_all');
+    card.classList.remove('courses__item_is_visible');
+  })
+}
+
+/* ___ 2. Check Checkboxes */
 
 function checkCheckboxes() {
   let i = 0;
   checkboxes.forEach(function (element) {
     if (element.checked) {
+      element.setAttribute('checked', '');
       deleteAllFiltersButton.classList.add('sidebar__delete-all-filters_opened');
       i++;
+    } else if (element.checked === false) {
+      element.removeAttribute('checked');
     }
   })
   if (i === 0) {
     deleteAllFiltersButton.classList.remove('sidebar__delete-all-filters_opened');
+    defaultCourses();
   }
 }
 
-/* ___ 2. Remove Filter */
+/* ___ 3. Remove Filter */
 
 function removeFilter(element) {
   const option = element.closest('.sidebar__option');
@@ -200,7 +223,8 @@ function removeFilter(element) {
   })
 }
 
-/* ___ 3. Add Filter */
+/* ___ 4. Add Filter */
+const coursesCards = coursesContainer.querySelectorAll('.courses__item');
 
 function addFilter(element) {
   const option = element.closest('.sidebar__option');
@@ -218,13 +242,10 @@ function addFilter(element) {
       checkCheckboxes();
       filterCourses(checkFilters(element));
     })
-  } else {
-    removeFilter(element);
   }
 }
 
-
-/* ___ 4. Active or Not */
+/* ___ 5. Active or Not */
 
 function checkActiveOrInactive(element) {
   const inactive = document.querySelector('#inactive');
@@ -239,18 +260,24 @@ function checkActiveOrInactive(element) {
   }
 }
 
-/* ___ 5. Checkboxes For Each */
+/* ___ 6. Checkboxes For Each */
 
 checkboxes.forEach(function (element) {
   element.addEventListener('click', function () {
     checkActiveOrInactive(element);
-    addFilter(element);
     checkCheckboxes();
     filterCourses(checkFilters(element));
   })
+  element.addEventListener('change', function () {
+    if (element.checked) {
+      addFilter(element);
+    } else {
+      removeFilter(element);
+    }
+  })
 })
 
-/* ___ 6. Remove All Filters */
+/* ___ 7. Remove All Filters */
 
 deleteAllFiltersButton.addEventListener('click', function () {
   const allActiveFilters = document.querySelectorAll('.sidebar__filter-value');
@@ -261,6 +288,7 @@ deleteAllFiltersButton.addEventListener('click', function () {
   checkboxes.forEach(function (element) {
     element.checked = false;
   })
+
   filters.level = [];
   filters.status = [];
   filterCourses(filters);
@@ -361,3 +389,5 @@ function filterCourses(arr) {
     }
   })
 }
+  defaultCourses();
+});

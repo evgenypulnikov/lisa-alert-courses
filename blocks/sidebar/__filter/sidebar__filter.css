@@ -4,10 +4,6 @@
   cursor: pointer;
 }
 
-.sidebar__filter:last-of-type {
-  border-bottom: none;
-}
-
 ::marker {
   content: ' ';
 }
