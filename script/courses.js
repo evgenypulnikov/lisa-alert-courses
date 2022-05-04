@@ -116,8 +116,8 @@ function createCourseItem(image, title, level, desc, lessons, hours, status) {
   courseItem.querySelector('.courses__course-title').textContent = title;
   courseItem.querySelector('.courses__course-level').textContent = level;
   courseItem.querySelector('.courses__course-description').textContent = maxTextLength(desc, 120);
-  courseItem.querySelector('.courses__info-stat_lessons-amount').textContent = `${lessons} занятий`;
-  courseItem.querySelector('.courses__info-stat_hours-amount').textContent = `${hours} ч`;
+  courseItem.querySelector('.courses__info-stat_lessons-amount').lastChild.textContent = `${lessons} занятий`;
+  courseItem.querySelector('.courses__info-stat_hours-amount').lastChild.textContent = `${hours} ч`;
   const courseButton = courseItem.querySelector('.button');
 
   switch (status) {
@@ -272,11 +272,11 @@ deleteAllFiltersButton.addEventListener('click', function () {
 function checkFilters(element) {
   if ((element.checked === true) && (filters.level.indexOf(element.id) === -1) && (element.getAttribute('data-atr') === 'level')) {
     filters.level.push(element.id);
-  } 
-  
+  }
+
   if ((element.checked === true) && (filters.status.indexOf(element.id) === -1) && (element.getAttribute('data-atr') === 'status')) {
     filters.status.push(element.id);
-  } 
+  }
 
   if (element.checked === false) {
     switch (element.getAttribute('data-atr')) {
