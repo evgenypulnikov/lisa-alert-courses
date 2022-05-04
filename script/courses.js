@@ -11,6 +11,15 @@ const courseHoursAmount = courseTemplate.querySelector('.courses__info-stat_hour
 const courseButton = courseTemplate.querySelector('.button');
 let checkedBox = [];
 
+///////////////////////////////////////////
+let filters = {
+  level: [],
+  status: []
+}
+console.log(filters);
+////////////////////////////////////////////
+
+
 const coursesList = [
   {
     courseImage: 'images/courses-list/cynology.jpg',
@@ -37,7 +46,7 @@ const coursesList = [
     courseDescription: 'Применение БПЛА в поиске людей, а так же передача полученной с помощью техники информации спасательным службам',
     lessonsAmount: 144,
     hoursAmount: 144,
-    courseStatus: 'active'
+    courseStatus: 'inactive'
   },
   {
     courseImage: 'images/courses-list/first-aid.jpg',
@@ -260,31 +269,52 @@ deleteAllFiltersButton.addEventListener('click', function () {
   checkboxes.forEach(function (element) {
     element.checked = false;
   })
-  checkedBox = [];
-  filterCourses(checkedBox);
+  filters.level = [];
+  filters.status = [];
+  filterCourses(filters);
 })
 
 
 /* ___ 7. Cards Filters */
 
 function checkFilters(element) {
-  if ((element.checked === true) && (checkedBox.indexOf(element.id) === -1)) {
-    checkedBox.push(element.id)
+  if ((element.checked === true) && (filters.level.indexOf(element.id) === -1) && (element.getAttribute('data-atr') === 'level')) {
+    filters.level.push(element.id);
+    console.log(filters);
   } 
+  
+  if ((element.checked === true) && (filters.status.indexOf(element.id) === -1) && (element.getAttribute('data-atr') === 'status')) {
+    filters.status.push(element.id);
+    console.log(filters);
+  } 
+
   if (element.checked === false) {
-    let b = checkedBox.indexOf(element.id);
-    checkedBox.splice(b,1);
-  }
-  if ((element.id === 'active') && (checkedBox.indexOf('inactive') !== -1)) {
-    b = checkedBox.indexOf('inactive');
-    checkedBox.splice(b,1);
+    switch (element.getAttribute('data-atr')) {
+      case 'level': {
+        let b = filters.level.indexOf(element.id);
+        filters.level.splice(b,1);
+        console.log(filters);
+        break;
+      }
+      case 'status': {
+        let b = filters.status.indexOf(element.id);
+        filters.status.splice(b,1);
+        console.log(filters);
+        break;
+      }
+    }
   }
 
-  if ((element.id === 'inactive') && (checkedBox.indexOf('active') !== -1)) {
-    b = checkedBox.indexOf('active');
-    checkedBox.splice(b,1);
+  if ((element.id === 'active') && (filters.status.indexOf('inactive') !== -1)) {
+    b = filters.status.indexOf('inactive');
+    filters.status.splice(b,1);
   }
-  return checkedBox;
+
+  if ((element.id === 'inactive') && (filters.status.indexOf('active') !== -1)) {
+    b = filters.status.indexOf('active');
+    filters.status.splice(b,1);
+  }
+  return filters;
 }
 
 function filterCourses(arr) {
@@ -294,7 +324,7 @@ function filterCourses(arr) {
     course.style.display = 'none';
   })
 
-  if (arr.length === 0) {
+  if (arr.level.length === 0 && arr.status.length === 0) {
     courses.forEach(course => {
       course.style.display = 'flex';
     })
@@ -318,10 +348,28 @@ function filterCourses(arr) {
       }
     }
 
-    arr.forEach(item => {
-      if (courseLevel === item  || courseStatus === item) {
-        course.style.display = 'flex';
+    if ((arr.level.length === 0) && (arr.status.length !== 0)) {
+      for (let j=0;j<arr.status.length;j++) {
+        if (courseStatus == arr.status[j]) {
+          course.style.display = 'flex';
+        }
       }
-    })
+    }
+
+    if ((arr.status.length === 0) && (arr.level.length !== 0)) {
+      for (let j=0;j<arr.level.length;j++) {
+        if (courseLevel == arr.level[j]) {
+          course.style.display = 'flex';
+        }
+      }
+    }
+
+    for (let i=0;i<arr.level.length;i++) {
+      for (let j=0;j<arr.status.length;j++) {
+        if ((courseLevel == arr.level[i]) && (courseStatus == arr.status[j])) {
+          course.style.display = 'flex';
+        }
+      }
+    }
   })
 }
