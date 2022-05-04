@@ -1,15 +1,71 @@
-@import url('../vendor/normalize.css');
-@import url('../fonts/fonts.css');
+/* Vendor */
 
-.page {
-  min-width: 1100px;
-  max-width: 1600px;
-  margin: 0 auto;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-}
+@import url("../vendor/normalize.css");
+@import url("../fonts/fonts.css");
+@import url("../vendor/vars.css");
 
-.header {
-  height: 100vh;
-  min-height: 600px;
-  max-height: 756px;
-}
+/* Page */
+
+@import url("../blocks/page/page.css");
+@import url("../blocks/page-link/page-link.css");
+@import url("../blocks/container/container.css");
+@import url("../blocks/container/_block_header/container_block_header.css");
+@import url("../blocks/container/_block_main/container_block_main.css");
+
+/* Buttons */
+
+@import url("../blocks/button/button.css");
+@import url("../blocks/button/_type_action/button_type_action.css");
+@import url("../blocks/button/_type_apply/button_type_apply.css");
+@import url("../blocks/button/_type_disabled/button_type_disabled.css");
+
+/* Header */
+
+@import url("../blocks/header/header.css");
+@import url("../blocks/header/__logo/header__logo.css");
+@import url("../blocks/header/__nav-list/header__nav-list.css");
+@import url("../blocks/header/__nav-link/header__nav-link.css");
+@import url("../blocks/header/__nav-icon/header__nav-icon.css");
+@import url("../blocks/header/__nav-link/_is_active/header__nav-link_is_active.css");
+
+/* Main */
+
+@import url("../blocks/main/main.css");
+@import url("../blocks/main-title/main-title.css");
+
+
+/* Courses List */
+
+@import url("../blocks/courses/courses.css");
+@import url("../blocks/courses/__item/courses__item.css");
+@import url("../blocks/courses/__course-image/courses__course-image.css");
+@import url("../blocks/courses/__columns/courses__columns.css");
+@import url("../blocks/courses/__column/courses__column.css");
+@import url("../blocks/courses/__course-title/courses__course-title.css");
+@import url("../blocks/courses/__course-level/courses__course-level.css");
+@import url("../blocks/courses/__course-description/courses__course-description.css");
+@import url("../blocks/courses/__course-info/courses__course-info.css");
+@import url("../blocks/courses/__info-stat/courses__info-stat.css");
+@import url("../blocks/courses/__info-icon/courses__info-icon.css");
+
+/* Filter */
+
+@import url("../blocks/sidebar/__wrapper/sidebar__wrapper.css");
+@import url("../blocks/sidebar/__heading/sidebar__heading.css");
+@import url("../blocks/sidebar/__title/sidebar_title.css");
+@import url("../blocks/sidebar/__filters/sidebar__filter.css");
+@import url("../blocks/sidebar/__filter-title/sidebar__filter-title.css");
+@import url("../blocks/sidebar/__filter/sidebar__filter.css");
+@import url("../blocks/sidebar/__icon-arrow/sidebar__icon-arrow.css");
+@import url("../blocks/sidebar/__filter-options/sidebar__filter-options.css");
+@import url("../blocks/sidebar/__option/sidebar__option.css");
+@import url("../blocks/sidebar/__filter-wrapper/sidebar__filter-wrapper.css");
+@import url("../blocks/sidebar/__hidden-checkbox/sidebar__hidden-checkbox.css");
+@import url("../blocks/sidebar/__checkbox/sidebar__checkbox.css");
+@import url("../blocks/sidebar/__checkbox-label/sidebar__checkbox-label.css");
+@import url("../blocks/sidebar/__filter-text/sisebar__filter-text.css");
+@import url("../blocks/sidebar/__delete-all-filters/sidebar__delete-all-filters.css");
+@import url("../blocks/sidebar/__chosen-filters/sidebar__chosen-filters.css");
+@import url("../blocks/sidebar/__filter-value/sidebar__filter-value.css");
+@import url("../blocks/sidebar/__close-button/sidebar__close-button.css");
+@import url("../blocks/sidebar/__delete-all-filters/_opened/sidebar__delete-all-filters_opened.css");

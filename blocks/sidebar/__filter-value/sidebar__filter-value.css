@@ -1,0 +1,8 @@
+.sidebar__filter-value {
+  display: flex;
+  align-items: center;
+  padding-right: 2px;
+  border-radius: 16px;
+  background-color: var(--color-tertiary);
+  white-space: nowrap;
+}

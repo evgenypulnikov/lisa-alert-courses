@@ -1,10 +1,29 @@
 @font-face {
     src:
-    url('../fonts/.woff') format('woff'),
-    url('../fonts/.woff2') format('woff2'),
-    url('../fonts/.eot') format('eot'),
-    url('../fonts/.otf') format('otf'),
-    url('../fonts/.ttf') format('ttf');
-    font-family: '';
-    font-weight: normal;
+    url("../fonts/GolosText-Regular.woff") format("woff"),
+    url("../fonts/GolosText-Regular.woff2") format("woff2"),
+    url("../fonts/GolosText-Regular.eot") format("eot"),
+    url("../fonts/GolosText-Regular.ttf") format("ttf");
+    font-family: "Golos";
+    font-weight: 400;
+  }
+
+  @font-face {
+    src:
+    url("../fonts/GolosText-Medium.woff") format("woff"),
+    url("../fonts/GolosText-Medium.woff2") format("woff2"),
+    url("../fonts/GolosText-Medium.eot") format("eot"),
+    url("../fonts/GolosText-Medium.ttf") format("ttf");
+    font-family: "Golos";
+    font-weight: 500;
+  }
+
+  @font-face {
+    src:
+    url("../fonts/GolosText-Bold.woff") format("woff"),
+    url("../fonts/GolosText-Bold.woff2") format("woff2"),
+    url("../fonts/GolosText-Bold.eot") format("eot"),
+    url("../fonts/GolosText-Bold.ttf") format("ttf");
+    font-family: "Golos";
+    font-weight: 700;
   }

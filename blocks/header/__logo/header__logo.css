@@ -1,0 +1,13 @@
+.header__logo {
+  color: var(--dark-primary);
+  font: var(--text-logo);
+  transition: color 0.5s ease;
+}
+
+.header__logo:hover {
+  color: var(--color-hover);
+}
+
+.header__logo:active {
+  color: var(--color-primary);
+}

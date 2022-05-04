@@ -1,0 +1,21 @@
+.form__input {
+  font: var(--text-main);
+  height: 50px;
+  margin-bottom: 31px;
+  padding: 10px 55px 10px 15px;
+  border: 1.2px solid var(--color-tertiary);
+  box-sizing: border-box;
+  border-radius: var(--radius);
+}
+
+.form__input:focus {
+  outline-color: var(--color-primary);
+}
+
+.form__input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+.form__input:active {
+  outline-color: var(--color-primary);
+}

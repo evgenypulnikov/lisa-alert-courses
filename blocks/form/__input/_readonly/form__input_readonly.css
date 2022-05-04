@@ -1,0 +1,4 @@
+.form__input_readonly {
+  pointer-events: none;
+  user-select: none;
+}

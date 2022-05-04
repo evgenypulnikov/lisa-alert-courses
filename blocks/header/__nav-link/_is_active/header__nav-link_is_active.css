@@ -1,0 +1,3 @@
+.header__nav-link_is_active {
+  color: var(--color-hover);
+}

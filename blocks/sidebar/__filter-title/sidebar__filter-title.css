@@ -1,0 +1,8 @@
+.sidebar__filter-title {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 32px 0px;
+  font: var(--text-main);
+  transition: color .3s ease;
+}

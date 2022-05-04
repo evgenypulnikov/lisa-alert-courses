@@ -1,0 +1,13 @@
+.sidebar__filter {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.sidebar__filter:last-of-type {
+  border-bottom: none;
+}
+
+::marker {
+  content: ' ';
+}

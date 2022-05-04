@@ -1,0 +1,6 @@
+.sidebar__filter-text {
+  display: inline-block;
+  margin-right: 6px;
+  padding-left: 8px;
+  font: var(--text-main);
+}

@@ -1,0 +1,7 @@
+.header__nav-list {
+  display: flex;
+  column-gap: 42px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

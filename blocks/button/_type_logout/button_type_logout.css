@@ -1,0 +1,8 @@
+.button_type_logout {
+  display: flex;
+  align-items: center;
+  column-gap: 11px;
+  justify-content: end;
+  width: 247px;
+  padding: 12px 22px;
+}

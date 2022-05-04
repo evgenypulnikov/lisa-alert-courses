@@ -1,0 +1,26 @@
+:root {
+  /* Colors */
+
+  --dark-primary: #212329;
+  --dark-secondary: #9397a3;
+  --color-primary: #ff6600;
+  --color-hover: #f06000;
+  --color-tertiary: #e6e7eb; /* Бордеры, разделители, дизейбл */
+  --bg-secondary: #fcfcfc;
+
+  /* Fonts */
+
+  --text-logo: 700 18px/24px "Golos", Helvetica, Arial, sans-serif;
+  --text-main-title: 700 48px/52px "Golos", Helvetica, Arial, sans-serif;
+  --text-main: 400 18px/24px "Golos", Helvetica, Arial, sans-serif;
+  --text-heading: 700 24px/28px "Golos", Helvetica, Arial, sans-serif;
+  --text-button: 500 18px/24px "Golos", Helvetica, Arial, sans-serif;
+
+
+  /* Decorates */
+
+  --radius: 16px;
+  --box-shadow: 0px 0px 4px 0px rgba(231, 232, 235, 0.6), 0px 4px 16px 0px rgba(231, 232, 235, 0.6);
+}
+
+

@@ -1,0 +1,11 @@
+.sidebar__icon-arrow {
+  width: 24px;
+  height: 24px;
+  background: url("../../../images/arrow-down.svg") no-repeat center;
+  transform: rotate(0);
+  transition: transform 0.3s ease;
+}
+
+.sidebar__filter[open] .sidebar__icon-arrow {
+  transform: rotate(180deg);
+}

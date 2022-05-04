@@ -1,0 +1,9 @@
+.button_type_action {
+  border: 1.2px solid var(--color-tertiary);
+  color: var(--color-primary);
+  background-color: #ffffff;
+}
+
+.button_type_action:hover {
+  border-color: var(--color-primary);
+}

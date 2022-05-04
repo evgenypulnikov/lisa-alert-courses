@@ -1,0 +1,5 @@
+.container_block_header {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 60px;
+}

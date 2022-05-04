@@ -1,0 +1,4 @@
+.container_block_main {
+  display: flex;
+  column-gap: 24px;
+}

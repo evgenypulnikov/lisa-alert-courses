@@ -1,0 +1,11 @@
+.sidebar__checkbox-label {
+  display: flex;
+  align-items: center;
+  font: var(--text-main);
+  cursor: pointer;
+  transition: color .3s ease;
+}
+
+.sidebar__checkbox-label:hover {
+  color: var(--color-hover);
+}

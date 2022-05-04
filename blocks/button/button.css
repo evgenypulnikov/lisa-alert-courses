@@ -1,0 +1,13 @@
+.button {
+  width: 224px;
+  margin-top: auto;
+  padding: 12px 24px;
+  border-radius: var(--radius);
+  font: var(--text-button);
+  transition: border 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+  box-sizing: border-box;
+  cursor: pointer;
+}
